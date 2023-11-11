@@ -7,7 +7,7 @@ char* main() {
   int shift;
   char num[16];
 
-#TODO create a function to, basicaly, bruteforce all possibilities
+//TODO create a function to, basicaly, bruteforce all possibilities
   printf("Choose shift number [1-26]: ");
   fflush(stdout);
   if (fgets(num, 16, stdin) == NULL) exit(EXIT_FAILURE);
