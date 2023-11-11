@@ -1,18 +1,32 @@
+/*
+
+Compilar sistema:
+gcc main.c ./funcs/*.c -I include -o bin/saida.exe
+
+Rodar sistema:
+./bin/saida.exe
+
+*/
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include <locale.h>
+#include "ui.h"
+
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
 
 int main(){
 
-    printf("              __   __     ______     ______                           \n");
-    printf("             /\\ \"-.\\ \\   /\\  __ \\   /\\  == \\                  \n");
-    printf("             \\ \\ \\-.  \\  \\ \\ \\/\\ \\  \\ \\  __<               \n");
-    printf("              \\ \\_\\\"\\_ \\  \\ \\_____\\  \\ \\_\\ \\_\\          \n");
-    printf("               \\/_/ \\/_/   \\/_____/   \\/_/ /_/                    \n");
-    printf(" ______     __   __     __     ______     __    __     ______                                      \n");
-    printf("/\\  ___\\   /\\ \"-.\\ \\   /\\ \\   /\\  ___\\   /\\ \"-./  \\   /\\  __ \\                                     \n");
-    printf("\\ \\  __\\   \\ \\ \\-.  \\  \\ \\ \\  \\ \\ \\__ \\  \\ \\ \\-./\\ \\  \\ \\  __ \\                                    \n");
-    printf(" \\ \\_____\\  \\ \\_\\\"\\_ \\  \\ \\_\\  \\ \\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_\\ \\_\\       \n");
-    printf("  \\/_____/   \\/_/ \\/_/   \\/_/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/                                   \n");
-    printf("\n");
-
+    limpa_tela();
+    menu_inicial();
+    Sleep(1000);
+    sobre();
+    
     return 0;
 }

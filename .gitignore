@@ -53,4 +53,5 @@ Mkfile.old
 dkms.conf
 
 .vscode
-historia.txt
+bin/*.exe
+bin/*saida.exe
