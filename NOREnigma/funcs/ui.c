@@ -69,7 +69,6 @@ void sobre(){
 }
 
 void historia(){
-
     imprimir_com_pausa("\t\t\033[3mFernando de Noronha\n\t\t1 de Junho de 2023\n\033[0m", 100);
     imprimir_com_pausa("\n\tNa tarde daquele pacato dia na ilha, uma sinfonia de ondas acariciava suavemente a costa de Fernando de Noronha. O Sol, em seu apice, banhava as casas e as arvores frutiferas que cercavam a pequena comunidade. Duas amigas, como ja era costume, saiam para colher frutas no entorno de suas casas, planejando um delicioso banquete refrescante de fim de tarde.\n", 35);
     pausa();
@@ -86,6 +85,83 @@ void historia(){
     imprimir_com_pausa("\nDAYANE: \"Ele deve ter sido mesmo muito especial. Consigo ver como seus olhos brilham ao falar dele.\"\n", 20);
     pausa();
     limpa_tela();
-
-    
+    imprimir_com_pausa("\nCLEMENTINA: \"Ah, Dayane, sinto muito a falta dele. Foi triste, mas ao menos ele nao sofreu. Estavamos dormindo e, quando acordei, ele ja tinha partido para estar com Deus.\"\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\nDAYANE: \"Mas sempre vejo a senhora falando dele com um sorriso. Ele deve ter sido um otimo marido.\"\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\nCLEMENTINA: \"Isso ele era, um maridao e tanto. O que acha de irmos voltando? Acho que ja temos frutas para uma semana inteira.\"\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\nDAYANE: \"Concordo, vamos sim.\"\033[0m\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tEnquanto retornavam, suas cestas repletas, conversavam sobre as fofocas da vizinhanca, um passatempo sempre bem-vindo. No entanto, a conversa leve eh subitamente interrompida quando Clementina comeca a agir de forma estranha.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"Qual a sua fruta favorita mesmo, Dayane? Se nao me engano era mang-...\"\033[0m\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tEla pausa abruptamente e para de andar. Dayane, surpresa, observa Clementina imovel, segurando firmemente sua cesta.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\033[3mDAYANE: \"Por que parou? Aconteceu algo?\"\033[0m\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\nNao ha resposta.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\033[3mDAYANE: \"Dona Clementina, a senhora esta bem?\"\033[0m\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\nAinda sem resposta, Clementina mantem uma expressao de terror em seu rosto. Dayane comeca a desesperar-se, preocupada com a amiga.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\033[3mDAYANE: \"CLEMENTINA, FALE COMIGO! O QUE ACONTECEU?!\"\033[0m\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tAntes que Dayane pudesse terminar a frase, Clementina cai, como uma pedra, espalhando frutas pelo chao. Dayane, em desespero, grita por socorro. Aos poucos, pessoas se reunem ao redor delas, e logo o socorro chega, levando Clementina as pressas para o hospital.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tApesar de todos os esforcos, nao foi possivel salvar Clementina. A noticia chocou toda a ilha e sua familia. O mais intrigante era que a causa exata do ocorrido permanecia um misterio. Mais tarde daquela noite, Dayane recebe uma ligacao.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\033[3m???: \"Alo?\"\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("DAYANE: \"Alo, quem eh?\"", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("???: \"Oi, sou Eliseu, primo de Clementina.\"", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("DAYANE: \"O que precisa?\"", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("ELISEU: \"Minha prima adorava mostrar fotos dela com Reginaldo. Acredito que ela ja tenha compartilhado algumas com voce.\"", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("DAYANE: \"Sim, ela adorava relembrar os momentos com ele.\"", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("ELISEU: \"Ela era muito apegada a essas fotos, principalmente apos a partida dele... Dayane, poderia escolher uma para o velorio? Nao temos coragem de entrar na casa dela agora...\"\033[0m", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tDayane hesitou, ponderando a dor e a nostalgia de tantas memorias compartilhadas com Clementina, e a estranha circunstancia de sua partida.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\033[3mDAYANE: \"Tudo bem, posso fazer isso.\"\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\nELISEU: \"Muito obrigado, Dayane. Ate mais.\"\033[0m\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tNaquela noite, Dayane, reunindo a coragem que lhe restava, pegou a chave e dirigiu-se a casa amarela no fim de sua rua, a casa de Clementina. Parada diante da porta, um turbilhao de memorias e emocoes a inundava, mas ela respirou fundo, determinada a fazer um ultimo favor a sua querida amiga.\n", 35);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\n\tAssumindo a pele de Dayane, ajude-a a completar a sua tarefa: encontre uma foto de Clementina e Reginaldo para ser utilizada no velorio.\n", 35);
+    pausa();
+    limpa_tela();
 }
+
