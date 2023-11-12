@@ -6,5 +6,6 @@
     void imprimir_com_pausa(char *mensagem, int pausa_ms);
     void menu_inicial();
     void sobre();
+    void historia();
     
 #endif //__UI_LIB__

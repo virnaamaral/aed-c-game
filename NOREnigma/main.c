@@ -24,9 +24,10 @@ Rodar sistema:
 int main(){
 
     limpa_tela();
-    menu_inicial();
-    Sleep(1000);
-    sobre();
-    
+    // menu_inicial();
+    // Sleep(1000);
+    // sobre();
+    historia();
+
     return 0;
 }
