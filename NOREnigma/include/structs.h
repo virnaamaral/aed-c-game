@@ -34,7 +34,7 @@
 
     }puzzle;
 
-    mapa criar_mapa();
+    mapa *criar_mapa();
 
 
 

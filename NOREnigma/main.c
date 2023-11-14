@@ -22,6 +22,7 @@ Rodar sistema:
     #include <unistd.h>
 #endif
 
+
 int main(){
 
     // mapa *mapaNOREnigma = criar_mapa();

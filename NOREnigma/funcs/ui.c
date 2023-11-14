@@ -11,6 +11,14 @@
     #include <unistd.h>
 #endif
 
+void setUtf8Encoding() {
+    #ifdef _WIN32
+    system("chcp 65001"); // Configura o código de página para UTF-8 no Windows
+    #else
+    printf("\e[1;1H\e[2J"); // Limpa a tela no Linux
+    #endif
+}
+
 void limpa_tela() {
     #ifdef __linux__
         system("clear");
@@ -20,6 +28,7 @@ void limpa_tela() {
         system("clear");
     #endif
 }
+
 void limpar_buffer_entrada() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
@@ -82,6 +91,9 @@ void sobre(){
 }
 
 void historia(){
+    setUtf8Encoding();
+    imprimir_com_pausa("éçççÀaaslkjü", 100);
+
     imprimir_com_pausa("\t\t\033[3mFernando de Noronha\n\t\t1 de Junho de 2023\n\033[0m", 100);
     imprimir_com_pausa("\n\tNa tarde daquele pacato dia na ilha, uma sinfonia de ondas acariciava suavemente a costa de Fernando de Noronha. O Sol, em seu apice, banhava as casas e as arvores frutiferas que cercavam a pequena comunidade. Duas amigas, como ja era costume, saiam para colher frutas no entorno de suas casas, planejando um delicioso banquete refrescante de fim de tarde.\n", 35);
     pausa();
