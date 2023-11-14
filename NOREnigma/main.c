@@ -14,6 +14,7 @@ Rodar sistema:
 #include <stdbool.h>
 #include <locale.h>
 #include "ui.h"
+#include "structs.h"
 
 #ifdef _WIN32
     #include <windows.h>
@@ -22,6 +23,10 @@ Rodar sistema:
 #endif
 
 int main(){
+
+    // mapa *mapaNOREnigma = criar_mapa();
+
+    // printf("%s", mapaNOREnigma->nome);
 
     limpa_tela();
     // menu_inicial();

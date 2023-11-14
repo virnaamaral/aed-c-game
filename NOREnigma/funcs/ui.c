@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include <conio.h>
 
 #ifdef _WIN32
     #include <windows.h>
+    
 #else
     #include <unistd.h>
 #endif
@@ -18,9 +20,14 @@ void limpa_tela() {
         system("clear");
     #endif
 }
+void limpar_buffer_entrada() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) { }
+}
 
 void pausa() {
-    printf("\n\nPressione ENTER para continuar...\n\n");
+    printf("\nPressione ENTER para continuar...\n");
+    limpar_buffer_entrada();
     getchar();
 }
 
@@ -28,6 +35,12 @@ void imprimir_com_pausa(char *mensagem, int pausa_ms) {
     for (int i = 0; mensagem[i] != '\0'; i++) {
         fputc(mensagem[i], stdout);
         fflush(stdout);
+
+        if (kbhit()) {
+            fflush(stdin);
+            printf("%s", &mensagem[i+1]);
+            break;
+        }
         
         #ifdef _WIN32
             Sleep(pausa_ms);
@@ -73,7 +86,7 @@ void historia(){
     imprimir_com_pausa("\n\tNa tarde daquele pacato dia na ilha, uma sinfonia de ondas acariciava suavemente a costa de Fernando de Noronha. O Sol, em seu apice, banhava as casas e as arvores frutiferas que cercavam a pequena comunidade. Duas amigas, como ja era costume, saiam para colher frutas no entorno de suas casas, planejando um delicioso banquete refrescante de fim de tarde.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tClementina, uma senhorinha de 80 anos, radiante de vida e alegria, seus cabelos branquinhos como a neve, refletiam a luz do sol. Em sua cesta, repousavam os mais suculentos cajus, siriguelas em tons vibrantes de vermelho, pinhas apetitosas e folhas de camomila, ingrediente para o seu tao amado chazinho calmante. A cada passo cuidadoso, ela lembrava os inumeros caminhos que percorreu ao longo de sua vida.", 35);
+    imprimir_com_pausa("\n\tClementina, uma senhorinha de 80 anos, radiante de vida e alegria, seus cabelos branquinhos como a neve, refletiam a luz do sol. Em sua cesta, repousavam os mais suculentos cajus, siriguelas em tons vibrantes de vermelho, pinhas apetitosas e folhas de camomila, ingrediente para o seu tao amado chazinho calmante. A cada passo cuidadoso, ela lembrava os inumeros caminhos que percorreu ao longo de sua vida.\n", 35);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\tAo seu lado, Dayane, com seus 50 e poucos anos, exibia uma disposicao que desafiava a idade. Seus cabelos cacheados dancavam ao sabor da brisa, sua pele parda reluzia sob o Sol, e seu sorriso delicado revelava uma personalidade doce e acolhedora. Ela acompanhava Clementina nestas caminhadas, um gesto de empatia e amizade.\n", 35);
@@ -109,13 +122,13 @@ void historia(){
     imprimir_com_pausa("\n\033[3mDAYANE: \"Por que parou? Aconteceu algo?\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nNao ha resposta.\n", 35);
+    imprimir_com_pausa("\n\tNao ha resposta.\n", 35);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\033[3mDAYANE: \"Dona Clementina, a senhora esta bem?\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nAinda sem resposta, Clementina mantem uma expressao de terror em seu rosto. Dayane comeca a desesperar-se, preocupada com a amiga.\n", 35);
+    imprimir_com_pausa("\n\tAinda sem resposta, Clementina mantem uma expressao de terror em seu rosto. Dayane comeca a desesperar-se, preocupada com a amiga.\n", 35);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\033[3mDAYANE: \"CLEMENTINA, FALE COMIGO! O QUE ACONTECEU?!\"\033[0m\n", 20);
@@ -130,22 +143,22 @@ void historia(){
     imprimir_com_pausa("\n\033[3m???: \"Alo?\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("DAYANE: \"Alo, quem eh?\"", 20);
+    imprimir_com_pausa("\nDAYANE: \"Alo, quem eh?\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("???: \"Oi, sou Eliseu, primo de Clementina.\"", 20);
+    imprimir_com_pausa("\n???: \"Oi, sou Eliseu, primo de Clementina.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("DAYANE: \"O que precisa?\"", 20);
+    imprimir_com_pausa("\nDAYANE: \"O que precisa?\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("ELISEU: \"Minha prima adorava mostrar fotos dela com Reginaldo. Acredito que ela ja tenha compartilhado algumas com voce.\"", 20);
+    imprimir_com_pausa("\nELISEU: \"Minha prima adorava mostrar fotos dela com Reginaldo. Acredito que ela ja tenha compartilhado algumas com voce.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("DAYANE: \"Sim, ela adorava relembrar os momentos com ele.\"", 20);
+    imprimir_com_pausa("\nDAYANE: \"Sim, ela adorava relembrar os momentos com ele.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("ELISEU: \"Ela era muito apegada a essas fotos, principalmente apos a partida dele... Dayane, poderia escolher uma para o velorio? Nao temos coragem de entrar na casa dela agora...\"\033[0m", 20);
+    imprimir_com_pausa("\nELISEU: \"Ela era muito apegada a essas fotos, principalmente apos a partida dele... Dayane, poderia escolher uma para o velorio? Nao temos coragem de entrar na casa dela agora...\"\n\033[0m", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\tDayane hesitou, ponderando a dor e a nostalgia de tantas memorias compartilhadas com Clementina, e a estranha circunstancia de sua partida.\n", 35);
