@@ -43,8 +43,32 @@ void criar_mapa(mapa **HeadMapaNOREnigma){
     // printf("\ncomodo2: %s\ndescricao: %s\nitens dispo: %d\n", comodo1->next->nome, comodo1->next->descricao, comodo1->next->itens_disponiveis);
 }
 
-void limpar_mapa(mapa **HeadMapaNOREnigma){
-    mapa *temp = (*HeadMapaNOREnigma);
+void limpar_lista(mapa **head){
+    mapa *temp = (*head);
 
-    // while(temp->next != NULL)
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+
+    while(temp->prev != NULL){
+        free(temp->next);
+        temp = temp->prev;
+    }
+
+    free(temp);
+    *head = NULL;
+    
+    printf("\nLIMPOU O MAPA\n");
+}
+
+void printlist(mapa *head){
+    while(head != NULL){
+        printf("%s\n", head->nome);
+        head = head->next;
+    }
+
+    if(head == NULL){
+        printf("\nlista vazia\n");
+    }
+
 }

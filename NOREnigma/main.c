@@ -28,8 +28,14 @@ int main(){
     mapa *HeadMapaNOREnigma = NULL;
     criar_mapa(&HeadMapaNOREnigma);
 
-    printf("%s\n", HeadMapaNOREnigma->nome);
-    printf("%d", HeadMapaNOREnigma->prev);
+    printlist(HeadMapaNOREnigma);
+
+    // printf("%s\n", HeadMapaNOREnigma->nome);
+    // printf("%d\n", HeadMapaNOREnigma->prev);
+
+    limpar_lista(&HeadMapaNOREnigma);
+
+    printlist(HeadMapaNOREnigma);
 
     // limpa_tela();
     // menu_inicial();

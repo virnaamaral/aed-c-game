@@ -35,6 +35,7 @@
     }puzzle;
 
     void criar_mapa(mapa **HeadMapaNOREnigma);
-    void limpar_mapa(mapa **HeadMapaNOREnigma);
+    void limpar_lista(mapa **head);
+    void printlist(mapa *head);
 
 #endif //__STRUCTS_LIB__
