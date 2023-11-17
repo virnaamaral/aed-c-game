@@ -1,10 +1,10 @@
 /*
 
 Compilar sistema:
-gcc main.c ./funcs/*.c -I include -o saida.exe
+gcc main.c ./funcs/*.c -I include -o main.exe
 
 Rodar sistema:
-./saida.exe
+./main.exe
 
 */
 

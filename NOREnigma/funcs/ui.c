@@ -69,40 +69,6 @@ void pausa() {
     getchar();
 }
 
-<<<<<<< HEAD
-
-int kbhit(void){
-  struct termios oldt, new_t;
-  int ch;
-  int oldf;
-
-  tcgetattr(STDIN_FILENO, &o
-ldt);
-
-  new_t = oldt;
-  new_t.c_lflag &= ~(ICANON | ECHO);
-  tcsetattr(STDIN_FILENO, TCSANOW, &new_t);
-
-  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
-  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
-
-  //ch = getchar();
-  ch = fflush();
-
-  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-  fcntl(STDIN_FILENO, F_SETFL, oldf);
-
-  if(ch != EOF){
-    ungetc(ch, stdin);
-    return 1;
-  }
-  return 0;
-
-}
-
-
-=======
->>>>>>> refs/remotes/origin/main
 void imprimir_com_pausa(char *mensagem, int pausa_ms) {
     for (int i = 0; mensagem[i] != '\0'; i++) {
         fputc(mensagem[i], stdout);
@@ -112,34 +78,23 @@ void imprimir_com_pausa(char *mensagem, int pausa_ms) {
             if (kbhit()) {
                 fflush(stdin);
                 printf("%s", &mensagem[i+1]);
-		break;
+		    break;
         }
 
         #else
             if(kbhit()){
-<<<<<<< HEAD
-	      while(kbhit()){
-		fflush(stdin);
-	      }
-	      printf("%s", &mensagem[i+1]);
-=======
 	            while(kbhit()){
-		        getchar();
+		            fflush(stdin);
 	            }
-	        printf("%s", &mensagem[i+1]);
->>>>>>> refs/remotes/origin/main
-	      break;
-	    }
-	    //usleep(pausa_ms * 1000);
+	            printf("%s", &mensagem[i+1]);
+	            break;
+	        }
+	        //usleep(pausa_ms * 1000);
 
         #endif
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 	
         #ifdef _WIN32
-	    Sleep(pausa_ms);
+	        Sleep(pausa_ms);
         #else
             usleep(pausa_ms * 1000);
         #endif
@@ -179,85 +134,84 @@ void sobre(){
 
 void historia(){
     setUtf8Encoding();
-    imprimir_com_pausa("éçççÀaaslkjü", 100);
-
+    limpa_tela();
     imprimir_com_pausa("\t\t\033[3mFernando de Noronha\n\t\t1 de Junho de 2023\n\033[0m", 100);
-    imprimir_com_pausa("\n\tNa tarde daquele pacato dia na ilha, uma sinfonia de ondas acariciava suavemente a costa de Fernando de Noronha. O Sol, em seu apice, banhava as casas e as arvores frutiferas que cercavam a pequena comunidade. Duas amigas, como ja era costume, saiam para colher frutas no entorno de suas casas, planejando um delicioso banquete refrescante de fim de tarde.\n", 35);
+    imprimir_com_pausa("\n\tNa tarde daquele pacato dia na ilha, uma sinfonia de ondas acariciava suavemente a costa de Fernando de Noronha. O Sol, em seu ápice, banhava as casas e as árvores frutíferas que cercavam a pequena comunidade. Duas amigas, como já era costume, saíam para colher frutas no entorno de suas casas, planejando um delicioso banquete refrescante de fim de tarde.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tClementina, uma senhorinha de 80 anos, radiante de vida e alegria, seus cabelos branquinhos como a neve, refletiam a luz do sol. Em sua cesta, repousavam os mais suculentos cajus, siriguelas em tons vibrantes de vermelho, pinhas apetitosas e folhas de camomila, ingrediente para o seu tao amado chazinho calmante. A cada passo cuidadoso, ela lembrava os inumeros caminhos que percorreu ao longo de sua vida.\n", 35);
+    imprimir_com_pausa("\n\tClementina, uma senhorinha de 80 anos, radiante de vida e alegria, seus cabelos branquinhos como a neve, refletiam a luz do sol. Em sua cesta, repousavam os mais suculentos cajus, siriguelas em tons vibrantes de vermelho, pinhas apetitosas e folhas de camomila, ingrediente para o seu tão amado chazinho calmante. A cada passo cuidadoso, ela lembrava os inúmeros caminhos que percorreu ao longo de sua vida.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tAo seu lado, Dayane, com seus 50 e poucos anos, exibia uma disposicao que desafiava a idade. Seus cabelos cacheados dancavam ao sabor da brisa, sua pele parda reluzia sob o Sol, e seu sorriso delicado revelava uma personalidade doce e acolhedora. Ela acompanhava Clementina nestas caminhadas, um gesto de empatia e amizade.\n", 35);
+    imprimir_com_pausa("\n\tAo seu lado, Dayane, com seus 50 e poucos anos, exibia uma disposição que desafiava a idade. Seus cabelos cacheados dançavam ao sabor da brisa, sua pele parda reluzia sob o Sol, e seu sorriso delicado revelava uma personalidade doce e acolhedora. Ela acompanhava Clementina nestas caminhadas, um gesto de empatia e amizade.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"O dia hoje esta bem ensolarado, nao eh? Dias assim sempre me fazem lembrar do Reginaldo. Ele adorava o calor do Sol.\"\n", 20);
+    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"O dia hoje esta bem ensolarado, nao é? Dias assim sempre me fazem lembrar do Reginaldo. Ele adorava o calor do Sol.\"\n", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\nDAYANE: \"Ele deve ter sido mesmo muito especial. Consigo ver como seus olhos brilham ao falar dele.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nCLEMENTINA: \"Ah, Dayane, sinto muito a falta dele. Foi triste, mas ao menos ele nao sofreu. Estavamos dormindo e, quando acordei, ele ja tinha partido para estar com Deus.\"\n", 20);
+    imprimir_com_pausa("\nCLEMENTINA: \"Ah, Dayane, sinto muito a falta dele. Foi triste, mas ao menos ele não sofreu. Estavamos dormindo e, quando acordei, ele ja tinha partido para estar com Deus.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nDAYANE: \"Mas sempre vejo a senhora falando dele com um sorriso. Ele deve ter sido um otimo marido.\"\n", 20);
+    imprimir_com_pausa("\nDAYANE: \"Mas sempre vejo a senhora falando dele com um sorriso. Ele deve ter sido um ótimo marido.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nCLEMENTINA: \"Isso ele era, um maridao e tanto. O que acha de irmos voltando? Acho que ja temos frutas para uma semana inteira.\"\n", 20);
+    imprimir_com_pausa("\nCLEMENTINA: \"Isso ele era, um maridão e tanto. O que acha de irmos voltando? Já temos frutas para uma semana inteira.\"\n", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\nDAYANE: \"Concordo, vamos sim.\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tEnquanto retornavam, suas cestas repletas, conversavam sobre as fofocas da vizinhanca, um passatempo sempre bem-vindo. No entanto, a conversa leve eh subitamente interrompida quando Clementina comeca a agir de forma estranha.\n", 35);
+    imprimir_com_pausa("\n\tEnquanto retornavam, suas cestas repletas, conversavam sobre as fofocas da vizinhança, um passatempo sempre bem-vindo. No entanto, a conversa leve é subitamente interrompida quando Clementina começa a agir de forma estranha.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"Qual a sua fruta favorita mesmo, Dayane? Se nao me engano era mang-...\"\033[0m\n", 20);
+    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"Qual a sua fruta favorita mesmo, Dayane? Se não me engano era mang-...\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tEla pausa abruptamente e para de andar. Dayane, surpresa, observa Clementina imovel, segurando firmemente sua cesta.\n", 35);
+    imprimir_com_pausa("\n\tEla pausa abruptamente e para de andar. Dayane, surpresa, observa Clementina imóvel, segurando firmemente sua cesta.\n", 35);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\033[3mDAYANE: \"Por que parou? Aconteceu algo?\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tNao ha resposta.\n", 35);
+    imprimir_com_pausa("\n\tNão há resposta.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\033[3mDAYANE: \"Dona Clementina, a senhora esta bem?\"\033[0m\n", 20);
+    imprimir_com_pausa("\n\033[3mDAYANE: \"Dona Clementina, a senhora está bem?\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tAinda sem resposta, Clementina mantem uma expressao de terror em seu rosto. Dayane comeca a desesperar-se, preocupada com a amiga.\n", 35);
+    imprimir_com_pausa("\n\tAinda sem resposta, Clementina mantém uma expressao de terror em seu rosto. Dayane começa a desesperar-se, preocupada com a amiga.\n", 35);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\033[3mDAYANE: \"CLEMENTINA, FALE COMIGO! O QUE ACONTECEU?!\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tAntes que Dayane pudesse terminar a frase, Clementina cai, como uma pedra, espalhando frutas pelo chao. Dayane, em desespero, grita por socorro. Aos poucos, pessoas se reunem ao redor delas, e logo o socorro chega, levando Clementina as pressas para o hospital.\n", 35);
+    imprimir_com_pausa("\n\tAntes que Dayane pudesse terminar a frase, Clementina cai, como uma pedra, espalhando frutas pelo chão. Dayane, em desespero, grita por socorro. Aos poucos, pessoas se reunem ao redor delas, e logo o socorro chega, levando Clementina as pressas para o hospital.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tApesar de todos os esforcos, nao foi possivel salvar Clementina. A noticia chocou toda a ilha e sua familia. O mais intrigante era que a causa exata do ocorrido permanecia um misterio. Mais tarde daquela noite, Dayane recebe uma ligacao.\n", 35);
+    imprimir_com_pausa("\n\tApesar de todos os esforcos, não foi possivel salvar Clementina, que já chegou sem vida ao hospital. A notícia chocou toda a ilha e sua família. O mais intrigante era que a causa exata do ocorrido permanecia um mistério. Mais tarde daquela noite, Dayane recebe uma ligação.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\033[3m???: \"Alo?\"\n", 20);
+    imprimir_com_pausa("\n\033[3m???: \"Alô?\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nDAYANE: \"Alo, quem eh?\"\n", 20);
+    imprimir_com_pausa("\nDAYANE: \"Alô, quem é?\"\n", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n???: \"Oi, sou Eliseu, primo de Clementina.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nDAYANE: \"O que precisa?\"\n", 20);
+    imprimir_com_pausa("\nDAYANE: \"Do que precisa?\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nELISEU: \"Minha prima adorava mostrar fotos dela com Reginaldo. Acredito que ela ja tenha compartilhado algumas com voce.\"\n", 20);
+    imprimir_com_pausa("\nELISEU: \"Minha prima adorava mostrar fotos dela com Reginaldo. Acredito que ela já tenha compartilhado algumas com você.\"\n", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\nDAYANE: \"Sim, ela adorava relembrar os momentos com ele.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nELISEU: \"Ela era muito apegada a essas fotos, principalmente apos a partida dele... Dayane, poderia escolher uma para o velorio? Nao temos coragem de entrar na casa dela agora...\"\n\033[0m", 20);
+    imprimir_com_pausa("\nELISEU: \"Ela era muito apegada a essas fotos, principalmente após a partida dele... Dayane, poderia escolher uma para o velório? Não temos coragem de entrar na casa dela agora...\"\n\033[0m", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\n\tDayane hesitou, ponderando a dor e a nostalgia de tantas memorias compartilhadas com Clementina, e a estranha circunstancia de sua partida.\n", 35);
@@ -266,13 +220,13 @@ void historia(){
     imprimir_com_pausa("\n\033[3mDAYANE: \"Tudo bem, posso fazer isso.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nELISEU: \"Muito obrigado, Dayane. Ate mais.\"\033[0m\n", 20);
+    imprimir_com_pausa("\nELISEU: \"Muito obrigado, Dayane. Até mais.\"\033[0m\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tNaquela noite, Dayane, reunindo a coragem que lhe restava, pegou a chave e dirigiu-se a casa amarela no fim de sua rua, a casa de Clementina. Parada diante da porta, um turbilhao de memorias e emocoes a inundava, mas ela respirou fundo, determinada a fazer um ultimo favor a sua querida amiga.\n", 35);
+    imprimir_com_pausa("\n\tNaquela noite, Dayane, reunindo a coragem que lhe restava, pegou a chave e dirigiu-se a casa amarela no fim de sua rua, a casa de Clementina. Parada diante da porta, um turbilhão de memórias e emoções a inundava, mas ela respirou fundo, determinada a fazer um último favor a sua querida amiga.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\tAssumindo a pele de Dayane, ajude-a a completar a sua tarefa: encontre uma foto de Clementina e Reginaldo para ser utilizada no velorio.\n", 35);
+    imprimir_com_pausa("\n\tAssumindo a pele de Dayane, ajude-a a completar a sua tarefa: encontre uma foto de Clementina e Reginaldo para ser utilizada no velório.\n", 35);
     pausa();
     limpa_tela();
 }
