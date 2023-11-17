@@ -11,7 +11,8 @@
     #include <fcntl.h>
     #include <unistd.h>
     #include <curses.h>
-    int kbhit(void){
+
+int kbhit(void){
     struct termios oldt, new_t;
     int ch;
     int oldf;
@@ -50,11 +51,11 @@ void setUtf8Encoding() {
 
 void limpa_tela() {
     #ifdef __linux__
-        system("clear");
+    system("clear");
     #elif _WIN32
-        system("CLS");
+    system("CLS");
     #else
-        system("clear");
+    system("clear");
     #endif
 }
 
@@ -69,79 +70,39 @@ void pausa() {
     getchar();
 }
 
-<<<<<<< HEAD
 
-int kbhit(void){
-  struct termios oldt, new_t;
-  int ch;
-  int oldf;
-
-  tcgetattr(STDIN_FILENO, &o
-ldt);
-
-  new_t = oldt;
-  new_t.c_lflag &= ~(ICANON | ECHO);
-  tcsetattr(STDIN_FILENO, TCSANOW, &new_t);
-
-  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
-  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
-
-  //ch = getchar();
-  ch = fflush();
-
-  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-  fcntl(STDIN_FILENO, F_SETFL, oldf);
-
-  if(ch != EOF){
-    ungetc(ch, stdin);
-    return 1;
-  }
-  return 0;
-
-}
-
-
-=======
->>>>>>> refs/remotes/origin/main
 void imprimir_com_pausa(char *mensagem, int pausa_ms) {
     for (int i = 0; mensagem[i] != '\0'; i++) {
         fputc(mensagem[i], stdout);
         fflush(stdout);
 
-        #ifdef _WIN32
-            if (kbhit()) {
-                fflush(stdin);
-                printf("%s", &mensagem[i+1]);
-		break;
+	#ifdef _WIN32
+	if (kbhit()) {
+	  fflush(stdin);
+	  printf("%s", &mensagem[i+1]);
+	  break;
         }
 
         #else
-            if(kbhit()){
-<<<<<<< HEAD
-	      while(kbhit()){
-		fflush(stdin);
-	      }
-	      printf("%s", &mensagem[i+1]);
-=======
-	            while(kbhit()){
-		        getchar();
-	            }
-	        printf("%s", &mensagem[i+1]);
->>>>>>> refs/remotes/origin/main
-	      break;
-	    }
-	    //usleep(pausa_ms * 1000);
+        if(kbhit()){
+
+	  fflush(stdin);
+
+
+	  printf("%s", &mensagem[i+1]);
+
+	  break;
+	}
+	  //usleep(pausa_ms * 1000);
 
         #endif
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/remotes/origin/main
-	
+
+
         #ifdef _WIN32
 	    Sleep(pausa_ms);
         #else
-            usleep(pausa_ms * 1000);
+        usleep(pausa_ms * 1000);
         #endif
     }
 }
