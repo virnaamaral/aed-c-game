@@ -11,7 +11,8 @@
     #include <fcntl.h>
     #include <unistd.h>
     #include <curses.h>
-    int kbhit(void){
+
+int kbhit(void){
     struct termios oldt, new_t;
     int ch;
     int oldf;
@@ -50,11 +51,11 @@ void setUtf8Encoding() {
 
 void limpa_tela() {
     #ifdef __linux__
-        system("clear");
+    system("clear");
     #elif _WIN32
-        system("CLS");
+    system("CLS");
     #else
-        system("clear");
+    system("clear");
     #endif
 }
 
@@ -74,29 +75,30 @@ void imprimir_com_pausa(char *mensagem, int pausa_ms) {
         fputc(mensagem[i], stdout);
         fflush(stdout);
 
-        #ifdef _WIN32
-            if (kbhit()) {
-                fflush(stdin);
-                printf("%s", &mensagem[i+1]);
-		    break;
+	    #ifdef _WIN32
+	    if (kbhit()) {
+	        fflush(stdin);
+	        printf("%s", &mensagem[i+1]);
+	        break;
         }
 
         #else
-            if(kbhit()){
-	            while(kbhit()){
-		            fflush(stdin);
-	            }
-	            printf("%s", &mensagem[i+1]);
-	            break;
-	        }
-	        //usleep(pausa_ms * 1000);
+        if(kbhit()){
+
+	    fflush(stdin);
+	    printf("%s", &mensagem[i+1]);
+
+	    break;
+	    }
+	    //usleep(pausa_ms * 1000);
 
         #endif
-	
+
+
         #ifdef _WIN32
-	        Sleep(pausa_ms);
+	    Sleep(pausa_ms);
         #else
-            usleep(pausa_ms * 1000);
+        usleep(pausa_ms * 1000);
         #endif
     }
 }
