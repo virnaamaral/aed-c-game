@@ -42,12 +42,14 @@ void pausa() {
     getchar();
 }
 
+
 int kbhit(void){
   struct termios oldt, new_t;
   int ch;
   int oldf;
 
-  tcgetattr(STDIN_FILENO, &oldt);
+  tcgetattr(STDIN_FILENO, &o
+ldt);
 
   new_t = oldt;
   new_t.c_lflag &= ~(ICANON | ECHO);
@@ -56,7 +58,8 @@ int kbhit(void){
   oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
   fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
 
-  ch = getchar();
+  //ch = getchar();
+  ch = fflush();
 
   tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
   fcntl(STDIN_FILENO, F_SETFL, oldf);
@@ -79,13 +82,13 @@ void imprimir_com_pausa(char *mensagem, int pausa_ms) {
             if (kbhit()) {
                 fflush(stdin);
                 printf("%s", &mensagem[i+1]);
-            break;
+		break;
         }
 
         #else
             if(kbhit()){
 	      while(kbhit()){
-		getchar();
+		fflush(stdin);
 	      }
 	      printf("%s", &mensagem[i+1]);
 	      break;
@@ -94,28 +97,9 @@ void imprimir_com_pausa(char *mensagem, int pausa_ms) {
 
 
         #endif
-	// Se for windows, rodar o if abaixo
-	    //	if(kbhit()){
-	    //	  while(kbhit()){
-	    //	    getchar();
-	    //	  }
-	    //	  printf("%s", mensagem[i+1]);
-	    //	  break;
-	    //	}
-	    //	usleep(pausa_ms * 1000);
-
-
-	//	
-	  //	// Se for windows, rodar esse
-	  //        if (kbhit()) {
-	  //            fflush(stdin);
-	  //            printf("%s", &mensagem[i+1]);
-	  //            break;
-	  //        }
-	//
 	
         #ifdef _WIN32
-            Sleep(pausa_ms);
+	    Sleep(pausa_ms);
         #else
             usleep(pausa_ms * 1000);
         #endif
