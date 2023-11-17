@@ -25,15 +25,17 @@ Rodar sistema:
 
 int main(){
 
-    // mapa *mapaNOREnigma = criar_mapa();
+    mapa *HeadMapaNOREnigma = NULL;
+    criar_mapa(&HeadMapaNOREnigma);
 
-    // printf("%s", mapaNOREnigma->nome);
+    printf("%s\n", HeadMapaNOREnigma->nome);
+    printf("%d", HeadMapaNOREnigma->prev);
 
-    limpa_tela();
+    // limpa_tela();
     // menu_inicial();
     // Sleep(1000);
     // sobre();
-    historia();
+    // historia();
 
     return 0;
 }

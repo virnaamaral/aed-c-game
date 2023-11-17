@@ -84,16 +84,13 @@ void imprimir_com_pausa(char *mensagem, int pausa_ms) {
 
         #else
         if(kbhit()){
-
-	    fflush(stdin);
-	    printf("%s", &mensagem[i+1]);
-
-	    break;
+	        fflush(stdin);
+	        printf("%s", &mensagem[i+1]);
+	        break;
 	    }
 	    //usleep(pausa_ms * 1000);
 
         #endif
-
 
         #ifdef _WIN32
 	    Sleep(pausa_ms);
@@ -128,10 +125,12 @@ void menu_inicial(){
 }
 
 void sobre(){
-    printf("\tDesenvolvido em 2023, NOREnigma eh um projeto para a cadeira de Algoritmos e Estrutura de Dados do terceiro periodo.\n");
-    printf("Tinhamos a tarefa de criar um game totalmente do zero em C, tendo como enfoque alguma estrutura de dados de nossa escolha\n");
-    printf("que foi abordada durante o periodo. Escolhemos utilizar listas duplamente encadeadas pela versatilidade e facilidade na\n");
-    printf("manipulacao dos dados com ela.\n\nTIME:\nPedro Monteiro\nVirna Amaral\nEduarda Aguiar\n");
+    printf("\tDesenvolvido em 2023, NOREnigma é um projeto para a cadeira de Algoritmos e Estrutura de Dados do terceiro período do curso de Ciência da Computação.\n");
+    printf("Tínhamos a tarefa de criar um game totalmente do zero em C, tendo como enfoque alguma estrutura de dados de nossa escolha\n");
+    printf("que foi abordada durante o período. Escolhemos utilizar listas duplamente encadeadas pela versatilidade e facilidade na\n");
+    printf("movimentação pela lista e manipulação dos dados com ela.\n\nTime de Desenvolvimento:\nPedro Monteiro\nVirna Amaral\nEdüarda Agüiar\n");
+    printf("[1] - Voltar\n");
+
 }
 
 void historia(){

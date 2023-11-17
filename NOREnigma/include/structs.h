@@ -34,8 +34,7 @@
 
     }puzzle;
 
-    mapa *criar_mapa();
-
-
+    void criar_mapa(mapa **HeadMapaNOREnigma);
+    void limpar_mapa(mapa **HeadMapaNOREnigma);
 
 #endif //__STRUCTS_LIB__
