@@ -55,7 +55,7 @@ void puzzle3(){
             limpa_tela();
         }
         
-    }while(flag_circuito_1 != 1 );
+    }while(flag_circuito_1 == 0);
 
     limpa_tela();
     printf("\n\nVocê insere a sua resposta para o circuito e acerta! Uma das luzes da porta acende e uma luz verde pode ser enxergada.\nIsso parece promissor. Você percebe que o circuito começa a mudar magicamente, revelando um novo desenho.\n");
@@ -111,7 +111,7 @@ void puzzle3(){
         scanf("%d %d %d %d", &A, &B, &C, &D);
         fflush(stdin);
     
-        if((A == 1 && B == 1 && C == 1 && D == 0)){ //substituir por while ou for
+        if((A == 1 && B == 1 && C == 1 && D == 0)){
             flag_circuito_3 = 1;
         }else{
             limpa_tela();
@@ -123,5 +123,4 @@ void puzzle3(){
     }while(flag_circuito_3 = 0);
     
     printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique.\nVocê decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
-
 }
