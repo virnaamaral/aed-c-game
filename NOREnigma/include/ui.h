@@ -7,5 +7,6 @@
     void menu_inicial();
     void sobre();
     void historia();
-    
+    void setUtf8Encoding();
+
 #endif //__UI_LIB__
