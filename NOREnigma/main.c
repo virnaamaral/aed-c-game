@@ -7,7 +7,6 @@ Rodar sistema:
 ./main.exe
 
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,7 +15,6 @@ Rodar sistema:
 #include "ui.h"
 #include "structs.h"
 #include "sorting.h"
-
 
 #ifdef _WIN32
     #include <windows.h>
