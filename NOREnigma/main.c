@@ -15,6 +15,8 @@ Rodar sistema:
 #include <locale.h>
 #include "ui.h"
 #include "structs.h"
+#include "sorting.h"
+
 
 #ifdef _WIN32
     #include <windows.h>

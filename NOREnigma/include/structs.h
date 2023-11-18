@@ -1,7 +1,7 @@
 #ifndef __STRUCTS_LIB__
 #define __STRUCTS_LIB__
 
-#include <stdbool.h>
+    #include <stdbool.h>
 
     typedef struct mapa{
         struct mapa *next;
@@ -37,5 +37,6 @@
     void criar_mapa(mapa **HeadMapaNOREnigma);
     void limpar_lista(mapa **head);
     void printlist(mapa *head);
+
 
 #endif //__STRUCTS_LIB__
