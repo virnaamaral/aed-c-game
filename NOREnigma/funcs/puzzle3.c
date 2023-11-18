@@ -4,73 +4,124 @@
 #include "structs.h"
 #include "ui.h"
 
-// ainda faltam detalhes aqui - falar da insercao das faquinhas
 void puzzle3(){
-    int A, B, C, D; 
-    
+
     setUtf8Encoding();
     limpa_tela();
-    printf("Ao aproximar-se da porta, você vê que, no balcão, existem 4 facas soltas próximas ao faqueiro. Algo parece estar gravado na parte direita dele. Chegando perto, lhe surge um pensamento: \n");
-    imprimir_com_pausa("\033[3m\"Interessante, se parece muito com um circuito... Seria um circuito lógico? Com certeza são! Me lembro bem das aulas de Sistemas Digitais e Infraestrutura de Hardware que tive há alguns anos atrás durante minha mais recente graduação.\"\n", 20);
-    imprimir_com_pausa("\n\"Será que o faqueiro, essas facas e o circuito são a resposta para abrir a porta estranha?...\033[0m\"\n", 20);
+
+    int A = 0, B = 0, C = 0, D = 0;
+    int flag_circuito_1 = 0;
+    int flag_circuito_2 = 0;
+    int flag_circuito_3 = 0;
+
+    printf("Ao se aproximar da porta, você nota que, em um balcão próximo, há quatro facas soltas ao lado de um faqueiro. Algo chama a sua atenção na parte direita do faqueiro, onde algo parece estar gravado.\nNa parte de cima do faqueiro, você vê as letras \"A\", \"B\", \"C\" e \"D\", cada uma ao lado de um respectivo buraco. Com tudo isso, lhe surge um pensamento: \n");
     pausa();
     limpa_tela();
-    printf("Ao aproximar-se da porta, você vê que, no balcão, existem 4 facas soltas próximas ao faqueiro. Algo parece estar gravado na parte direita dele. Chegando perto, lhe surge um pensamento: \n");
-    
-
+    imprimir_com_pausa("\033[3m\"Interessante, esse desenho na lateral, essas letras... Tudo isso me lembra muito circuitos lógicos... É isso mesmo! Me lembro bem das aulas de Sistemas Digitais e Infraestrutura de Hardware que tive há alguns anos atrás durante minha mais recente graduação.\"\n", 20);
+    imprimir_com_pausa("\n\"Será que o faqueiro, essas facas e o circuito são a chave para abrir essa estranha porta?\"\n", 20);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\"De fato, esse faqueiro não é comum. Vou tentar fazer alguns testes...\033[0m\"\n", 20);
+    pausa();
     limpa_tela();
 
-    printf("\n\tA ─────┐");
-    printf("\n\t      AND ───┐");
-    printf("\n\tB ─NOT─┘     │");
-    printf("\n\t            AND─── [Saída]");
-    printf("\n\tC ──NOT┐     │");
-    printf("\n\t      AND ───┘");
-    printf("\n\tD ─────┘");
+    do{
+        limpa_tela();
+        printf("\n\t\tCIRCUITO 1:\n\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\")e as \nentradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a saída do circuito seja igual a 1?\n");
+        printf("\nOBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.:\n(A = 1 B = 0 C = 0 D = 0)\nRESPOSTA:\"1 0 0 0\"\n\n");
 
-    printf("\t\tCIRCUITO 1:\n\tConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\")e as \nentradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a sua saída seja igual a 1?\n");
-    printf("OBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.: 0 0 0 0\n\n");
-    scanf("%d %d %d %d", &A, &B, &C, &D);
-    fflsuh(stdin);
-
-    if(A == 1 && B == 0 && C == 0 && D == 1){
-        printf("Uma das luzes da porta acende e uma luz verde pode ser enxergada. Pelo visto, você esta no caminnho certo.\nLogo, você observa o circuito se movimentando, e percebe que o desenho está mudando. Você observa um novo circuito surgir quase que num passe de mágica.");
+        printf("\n\t\tA ─────┐");
+        printf("\n\t\t      AND ───┐");
+        printf("\n\t\tB ─NOT─┘     │");
+        printf("\n\t\t            AND─── [Saída]");
+        printf("\n\t\tC ──NOT┐     │");
+        printf("\n\t\t      AND ───┘");
+        printf("\n\t\tD ─────┘\n");
         
-        printf("\n\tA ──NOT──┐");
-        printf("\n\t        AND ───┐");
-        printf("\n\tB ───────┘     │");
-        printf("\n\t              AND─── [Saída]");
-        printf("\n\tC ──NOT──┐     │");
-        printf("\n\t        AND ───┘");
-        printf("\n\tD ───────┘");
-
-        printf("\n\n\t\tCIRCUITO 2:\n\tConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\")e as \nentradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a sua saída seja igual a 1?\n");
-        printf("OBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.: 0 0 0 0\n\n");
+        printf("\nInsira a resposta para o circuito acima: ");
         scanf("%d %d %d %d", &A, &B, &C, &D);
-        fflsuh(stdin);
-
-        if(A == 0 && B == 1 && C == 0 && D == 1){
-            printf("A segunda luz da porta se acende. Resta apenas uma luz apagada quando você vê o outro circuito sendo formado.\n");
+        fflush(stdin);
         
-            printf("\n\tA ─────┐");
-            printf("\n\t      AND ───┐");
-            printf("\n\tB ─────┘     │");
-            printf("\n\t          AND─── [Saída]");
-            printf("\n\tC ─────┐     │");
-            printf("\n\t      AND ───┘");
-            printf("\n\tD ─NOT─┘");
+        printf("\nA = %d B = %d C = %d D = %d\n", A, B, C, D);
+        pausa();
 
-            printf("\n\n\t\tCIRCUITO 3:\n\tConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\")e as \nentradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a sua saída seja igual a 1?\n");
-            printf("OBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.: 0 0 0 0\n\n");
-            scanf("%d %d %d %d", &A, &B, &C, &D);
-            fflsuh(stdin);
+        if((A == 1 && B == 0 && C == 0 && D == 1) && flag_circuito_1 == 0 && flag_circuito_2 == 0 && flag_circuito_3 == 0){
+            flag_circuito_1 = 1;
+            printf("\n\nentrou no if 1\n\n");
+        }else{
+            limpa_tela();
+            printf("\n\nApós inserir as facas, você espera que uma lâmpada se acenda, mas a porta permanece inalterada.\n\"A sequência não está correta\", você conclui, retirando as facas para tentar outra combinação. A resposta certa ainda está à sua espera.");
+            pausa();
+            limpa_tela();
+        }
         
-            if(A == 1 && B == 1 && C == 1 && D == 0){
-                printf("Ao posicionar a última faca, você vê a última lâmpada que restava apagada sendo acessa e, junto\ndisso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
+    }while(flag_circuito_1 != 1 );
 
-            }
+    limpa_tela();
+    printf("\n\nVocê insere a sua resposta para o circuito e acerta! Uma das luzes da porta acende e uma luz verde pode ser enxergada.\nIsso parece promissor. Você percebe que o circuito começa a mudar magicamente, revelando um novo desenho.\n");
+    imprimir_com_pausa("\n\033[3m\"Então era o que eu suspeitava. As facas servem para ligar um fio em outro dentro do faqueiro,\npermitindo a passagem de uma corrente...\033[0m\"\n", 20);
+    pausa();
+    limpa_tela();
+   
+    do{
+
+        printf("\t\tCIRCUITO 2:\n\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as\nentradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a saída  do circuito seja igual a 1?\n");
+        printf("\nOBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.:\n(A = 1 B = 0 C = 0 D = 0)\nRESPOSTA:\"1 0 0 0\"\n\n");
+
+        printf("\n\t\tA ──NOT──┐");
+        printf("\n\t\t        AND ───┐");
+        printf("\n\t\tB ───────┘     │");
+        printf("\n\t\t              AND─── [Saída]");
+        printf("\n\t\tC ──NOT──┐     │");
+        printf("\n\t\t        AND ───┘");
+        printf("\n\t\tD ───────┘\n");
+
+        printf("\nInsira a resposta para o circuito acima: ");
+        scanf("%d %d %d %d", &A, &B, &C, &D);
+        fflush(stdin);
+
+        if((A == 0 && B == 1 && C == 0 && D == 1) && flag_circuito_1 == 1 && flag_circuito_2 == 0 && flag_circuito_3 == 0){ //substituir por while ou for
+            flag_circuito_2 = 1;
+        }else{
+            limpa_tela();
+            printf("\n\nApós inserir as facas, você espera que uma lâmpada se acenda, mas a porta permanece inalterada.\n\"A sequência não está correta\", você conclui, retirando as facas para tentar outra combinação. A resposta certa ainda está à sua espera.");
+            pausa();
+            limpa_tela();
+        }
+    }while(flag_circuito_2 = 0);
+    
+    limpa_tela();
+    printf("\n\nA segunda luz da porta se acende. Resta apenas uma luz apagada quando você vê um outro circuito sendo formado.\n");
+    pausa();
+    limpa_tela();
+
+    do{
+        printf("\n\t\tCIRCUITO 3:\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\")e as \nentradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a sua saída seja igual a 1?\n");
+        printf("\nOBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.:\n(A = 1 B = 0 C = 0 D = 0)\nRESPOSTA:\"1 0 0 0\"\n\n");
+    
+        printf("\n\t\tA ─────┐");
+        printf("\n\t\t      AND ───┐");
+        printf("\n\t\tB ─────┘     │");
+        printf("\n\t\t          AND─── [Saída]");
+        printf("\n\t\tC ─────┐     │");
+        printf("\n\t\t      AND ───┘");
+        printf("\n\t\tD ─NOT─┘\n");
+
+        printf("\nInsira a resposta para o circuito acima: ");
+        scanf("%d %d %d %d", &A, &B, &C, &D);
+        fflush(stdin);
+    
+        if((A == 1 && B == 1 && C == 1 && D == 0)){ //substituir por while ou for
+            flag_circuito_3 = 1;
+        }else{
+            limpa_tela();
+            printf("\n\nApós inserir as facas, você espera que uma lâmpada se acenda, mas a porta permanece inalterada.\n\"A sequência não está correta\", você conclui, retirando as facas para tentar outra combinação. A resposta certa ainda está à sua espera.");
+            pausa();
+            limpa_tela();
         }
 
-    }
+    }while(flag_circuito_3 = 0);
+    
+    printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique.\nVocê decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
 
 }

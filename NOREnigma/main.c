@@ -15,6 +15,7 @@ Rodar sistema:
 #include "ui.h"
 #include "structs.h"
 #include "sorting.h"
+#include "puzzles.h"
 
 #ifdef _WIN32
     #include <windows.h>
@@ -25,23 +26,25 @@ Rodar sistema:
 
 int main(){
 
-    mapa *HeadMapaNOREnigma = NULL;
-    criar_mapa(&HeadMapaNOREnigma);
+    // mapa *HeadMapaNOREnigma = NULL;
+    // criar_mapa(&HeadMapaNOREnigma);
 
-    printlist(HeadMapaNOREnigma);
+    // printlist(HeadMapaNOREnigma);
 
     // printf("%s\n", HeadMapaNOREnigma->nome);
     // printf("%d\n", HeadMapaNOREnigma->prev);
 
-    limpar_lista(&HeadMapaNOREnigma);
+    // limpar_lista(&HeadMapaNOREnigma);
 
-    printlist(HeadMapaNOREnigma);
+    // printlist(HeadMapaNOREnigma);
 
     // limpa_tela();
     // menu_inicial();
     // Sleep(1000);
     // sobre();
     // historia();
+
+    puzzle3();
 
     return 0;
 }
