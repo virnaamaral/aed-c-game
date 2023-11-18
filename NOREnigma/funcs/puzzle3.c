@@ -4,10 +4,10 @@
 #include "structs.h"
 #include "ui.h"
 
-
+// ainda faltam detalhes aqui - falar da insercao das faquinhas
 void puzzle3(){
     int A, B, C, D; 
-
+    
     setUtf8Encoding();
     limpa_tela();
     printf("Ao aproximar-se da porta, você vê que, no balcão, existem 4 facas soltas próximas ao faqueiro. Algo parece estar gravado na parte direita dele. Chegando perto, lhe surge um pensamento: \n");
