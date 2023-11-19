@@ -33,7 +33,7 @@ void puzzle3(){
         printf("\n\t\t      AND ───┐");
         printf("\n\t\tB ─NOT─┘     │");
         printf("\n\t\t            AND─── [Saída]");
-        printf("\n\t\tC ──NOT┐     │");
+        printf("\n\t\tC ─NOT─┐     │");
         printf("\n\t\t      AND ───┘");
         printf("\n\t\tD ─────┘\n\n");
         
@@ -112,5 +112,7 @@ void puzzle3(){
     }
 
     printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
-
+    pausa();
+    limpa_tela();
+    //terminar isso aqui, mas a versão ta feita, falta inserir parte da historia
 }
