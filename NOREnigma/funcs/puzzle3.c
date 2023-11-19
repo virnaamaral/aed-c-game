@@ -26,7 +26,7 @@ void puzzle3(){
 
     while(flag_circuito_1 == 0){
         limpa_tela();
-        printf("\n\t\t\tCIRCUITO 1:\n\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as entradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a saída do circuito seja igual a 1?\n");
+        printf("\t\t\tCIRCUITO 1:\n\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as entradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a saída do circuito seja igual a 1?\n");
         printf("\nOBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.: (A = 1 B = 0 C = 0 D = 0)\nRESPOSTA A SER INSERIDA:\"1 0 0 0\"\n\n");
 
         printf("\n\t\tA ─────┐");
@@ -35,7 +35,7 @@ void puzzle3(){
         printf("\n\t\t            AND─── [Saída]");
         printf("\n\t\tC ──NOT┐     │");
         printf("\n\t\t      AND ───┘");
-        printf("\n\t\tD ─────┘\n");
+        printf("\n\t\tD ─────┘\n\n");
         
         printf("\nInsira a resposta para o circuito acima: ");
         scanf("%d %d %d %d", &A, &B, &C, &D);
@@ -48,7 +48,6 @@ void puzzle3(){
             pausa();
             limpa_tela();
         }
-        
     }
 
     limpa_tela();
@@ -58,8 +57,7 @@ void puzzle3(){
     limpa_tela();
 
     while(flag_circuito_2 == 0){
-
-        printf("\t\tCIRCUITO 2:\n\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as entradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a saída  do circuito seja igual a 1?\n");
+        printf("\t\t\tCIRCUITO 2:\n\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as entradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a saída  do circuito seja igual a 1?\n");
         printf("\nOBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.: (A = 1 B = 0 C = 0 D = 0)\nRESPOSTA A SER INSERIDA:\"1 0 0 0\"\n\n");
 
         printf("\n\t\tA ──NOT──┐");
@@ -68,7 +66,7 @@ void puzzle3(){
         printf("\n\t\t              AND─── [Saída]");
         printf("\n\t\tC ──NOT──┐     │");
         printf("\n\t\t        AND ───┘");
-        printf("\n\t\tD ───────┘\n");
+        printf("\n\t\tD ───────┘\n\n");
 
         printf("\nInsira a resposta para o circuito acima: ");
         scanf("%d %d %d %d", &A, &B, &C, &D);
@@ -89,7 +87,7 @@ void puzzle3(){
     limpa_tela();
 
     while(flag_circuito_3 == 0){
-        printf("\n\t\tCIRCUITO 3:\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as entradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a sua saída seja igual a 1?\n");
+        printf("\t\t\tCIRCUITO 3:\nConsiderando o sistema binário (0 para \"desligado\" e 1 para \"ligado\") e as entradas lógicas A, B, C e D, que valor binário cada uma delas precisa ter para que a sua saída seja igual a 1?\n");
         printf("\nOBS: Insira cada número separado por espaços em branco e, na ordem alfabética (A B C D).\nEx.: (A = 1 B = 0 C = 0 D = 0)\nRESPOSTA A SER INSERIDA:\"1 0 0 0\"\n\n");
     
         printf("\n\t\tA ─────┐");
@@ -98,7 +96,7 @@ void puzzle3(){
         printf("\n\t\t          AND─── [Saída]");
         printf("\n\t\tC ─────┐     │");
         printf("\n\t\t      AND ───┘");
-        printf("\n\t\tD ─NOT─┘\n");
+        printf("\n\t\tD ─NOT─┘\n\n");
 
         printf("\nInsira a resposta para o circuito acima: ");
         scanf("%d %d %d %d", &A, &B, &C, &D);
@@ -114,5 +112,5 @@ void puzzle3(){
     }
 
     printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
-    
+
 }

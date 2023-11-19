@@ -127,11 +127,7 @@ void menu_inicial(){
 void sobre(){
     setUtf8Encoding();
     limpa_tela();
-    printf("\tDesenvolvido em 2023, NOREnigma é um projeto para a cadeira de Algoritmos e Estrutura de Dados do terceiro período do curso de Ciência da Computação.\n");
-    printf("Tínhamos a tarefa de criar um game totalmente do zero em C, tendo como enfoque alguma estrutura de dados de nossa escolha\n");
-    printf("que foi abordada durante o período. Escolhemos utilizar listas duplamente encadeadas pela versatilidade e facilidade na\n");
-    printf("movimentação pela lista e manipulação dos dados com ela.\n\nTime de Desenvolvimento:\nPedro Monteiro\nVirna Amaral\nEdüarda Agüiar\n");
-    printf("\n[1] - Voltar\n");
+    printf("\tDesenvolvido em 2023, NOREnigma é um projeto para a cadeira de Algoritmos e Estrutura de Dados do terceiro período do curso de Ciência da Computação. Tínhamos a tarefa de criar um game totalmente do zero em C, tendo como enfoque alguma estrutura de dados de nossa escolha que foi abordada durante o período. Escolhemos utilizar listas duplamente encadeadas pela versatilidade e facilidade na movimentação pela lista e manipulação dos dados com ela.\n\nTime de Desenvolvimento:\nPedro Monteiro\nVirna Amaral\nEdüarda Agüiar\n");
 }
 
 void menu_sala(){
@@ -156,13 +152,13 @@ void historia(){
     imprimir_com_pausa("\n\tAo seu lado, Dayane, com seus 50 e poucos anos, exibia uma disposição que desafiava a idade. Seus cabelos cacheados dançavam ao sabor da brisa, sua pele parda reluzia sob o Sol, e seu sorriso delicado revelava uma personalidade doce e acolhedora. Ela acompanhava Clementina nestas caminhadas, um gesto de empatia e amizade.\n", 35);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"O dia hoje esta bem ensolarado, nao é? Dias assim sempre me fazem lembrar do Reginaldo. Ele adorava o calor do Sol.\"\n", 20);
+    imprimir_com_pausa("\n\033[3mCLEMENTINA: \"O dia hoje está bem ensolarado, não é? Dias assim sempre me fazem lembrar do Reginaldo. Ele adorava o calor do Sol.\"\n", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\nDAYANE: \"Ele deve ter sido mesmo muito especial. Consigo ver como seus olhos brilham ao falar dele.\"\n", 20);
     pausa();
     limpa_tela();
-    imprimir_com_pausa("\nCLEMENTINA: \"Ah, Dayane, sinto muito a falta dele. Foi triste, mas ao menos ele não sofreu. Estavamos dormindo e, quando acordei, ele ja tinha partido para estar com Deus.\"\n", 20);
+    imprimir_com_pausa("\nCLEMENTINA: \"Ah, Dayane, sinto muito a falta dele. Foi triste, mas ao menos ele não sofreu. Estávamos dormindo e, quando acordei, ele já tinha partido para estar com Deus.\"\n", 20);
     pausa();
     limpa_tela();
     imprimir_com_pausa("\nDAYANE: \"Mas sempre vejo a senhora falando dele com um sorriso. Ele deve ter sido um ótimo marido.\"\n", 20);

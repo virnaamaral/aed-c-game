@@ -26,6 +26,26 @@ Rodar sistema:
 
 int main(){
 
+    int input_menu;
+    setUtf8Encoding();
+
+    while(1){
+        limpa_tela();
+        menu_inicial();
+        scanf("%d", &input_menu);
+        
+        if(input_menu == 1){
+            historia();
+            puzzle3();
+        }else if(input_menu == 2){
+            sobre();
+            pausa();
+        }else if(input_menu == 3){
+            break;
+        }
+
+    }
+
     // mapa *HeadMapaNOREnigma = NULL;
     // criar_mapa(&HeadMapaNOREnigma);
 
@@ -36,15 +56,6 @@ int main(){
 
     // limpar_lista(&HeadMapaNOREnigma);
 
-    // printlist(HeadMapaNOREnigma);
-
-    // limpa_tela();
-    // menu_inicial();
-    // Sleep(1000);
-    // sobre();
-    // historia();
-
-    puzzle3();
 
     return 0;
 }
