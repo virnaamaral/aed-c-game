@@ -8,5 +8,6 @@
     void sobre();
     void historia();
     void setUtf8Encoding();
+    void limpar_buffer_entrada();
 
 #endif //__UI_LIB__
