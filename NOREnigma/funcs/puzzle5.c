@@ -71,7 +71,7 @@ void puzzle5(){
 
     while(1){
         resposta = 0;
-        printf("\t\t\tCHARADA 1:\n\n\t\033[3mPequeno e quadrado, com muitas pernas, mas não ando.\n\tMeu coração bate em hertz, mas não estou vivo.\n\tSou o maestro de uma orquestra eletrônica.\n\tQuem sou eu?\033[0m\n\n");
+        printf("\t\t\tCHARADA 1:\n\n\t\033[3mPequeno e retangular, com muitas pernas, mas não ando.\n\tMeu coração bate em hertz, mas não estou vivo.\n\tSou o maestro de uma orquestra eletrônica.\n\tQuem sou eu?\033[0m\n\n");
         printf("[1] - Placa-Mãe\n[2] - Processador\n[3] - Disco Rígido (HDD)\n[4] - Placa de Vídeo (GPU)\n\n");
         printf("Insira o número correspondente a uma das opções acima: ");
         scanf("%d", &resposta);
@@ -100,7 +100,7 @@ void puzzle5(){
 
     while(1){
         resposta = 0;
-        printf("\t\t\tCHARADA 2:\n\n\t\033[3mSou a Dory da computação. Muito rápida mas se me dão\n\tum choque, esqueço de tudo. Algumas pessoas podem ser\n\tversáteis, mas eu sou volátil.\n\tQuem sou eu?\033[0m\n\n");
+        printf("\t\t\tCHARADA 2:\n\n\t\033[3mSou a Dory da computação. Muito rápida mas se me dão\n\tum choque, esqueço de tudo. Algumas pessoas podem ser\n\tversáteis, mas eu sou volátil. Minha agilidade é \n\tcrucial para guiar a mente, mas quando o choque chega, \n\tperco minhas memórias no piscar de olhos.\t\nQuem sou eu?\033[0m\n\n");
         printf("[1] - Unidade de Estado Sólido (SSD)\n[2] - Cache do Processador (CPU Cache)\n[3] - Placa de Vídeo (GPU)\n[4] - Memória RAM\n\n");
         printf("Insira o número correspondente a uma das opções acima: ");
         scanf("%d", &resposta);
@@ -110,7 +110,7 @@ void puzzle5(){
             pausa();
             limpa_tela();
         }else{
-            if(resposta == 4){
+            if(resposta == 2){
                 imprimir_com_pausa("\n\tNovamente, as letras brilham em verde, indicando o seu acerto.\n", 20);
                 imprimir_com_pausa("\n\tVocê vê as letras se embaralhando, as novas opções começam a surgir, ao passo de que Spritu começa a falar a próxima charada.\n", 20);
                 pausa();
@@ -124,7 +124,7 @@ void puzzle5(){
             }
         }
     }
-    //4
+    //2
 
     while(1){
         resposta = 0;

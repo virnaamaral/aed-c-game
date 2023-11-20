@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sorting.h"
-#include "structs.h"
-#include "ui.h"
+#include "../include/sorting.h"
+#include "../include/structs.h"
+#include "../include/ui.h"
+
 
 void puzzle3(){
 
@@ -38,6 +39,8 @@ void puzzle3(){
         printf("\n\t\tD ─────┘\n\n");
         
         printf("\nInsira a resposta para o circuito acima: ");
+
+        //TODO temos que tratar a entrada das respostas
         scanf("%d %d %d %d", &A, &B, &C, &D);
         
         if(A == 1 && B == 0 && C == 0 && D == 1){
@@ -71,7 +74,7 @@ void puzzle3(){
         printf("\nInsira a resposta para o circuito acima: ");
         scanf("%d %d %d %d", &A, &B, &C, &D);
 
-        if((A == 0 && B == 1 && C == 0 && D == 1) && flag_circuito_1 == 1){ //substituir por while ou for
+        if((A == 0 && B == 1 && C == 0 && D == 1) && flag_circuito_1 == 1){ //TODO substituir por while ou for
             flag_circuito_2 = 1;
         }else{
             limpa_tela();
@@ -114,5 +117,5 @@ void puzzle3(){
     printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
     pausa();
     limpa_tela();
-    //terminar isso aqui, mas a versão ta feita, falta inserir parte da historia
+    //TODO terminar isso aqui, mas a versão ta feita, falta inserir parte da historia
 }

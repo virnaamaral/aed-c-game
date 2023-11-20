@@ -3,16 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-char* main() {
+int main(void) {
   int shift;
-  char num[16];
 
 //TODO create a function to, basicaly, bruteforce all possibilities
   printf("Choose shift number [1-26]: ");
   fflush(stdout);
-  if (fgets(num, 16, stdin) == NULL) exit(EXIT_FAILURE);
+  scanf("%d", &shift);
 
-  shift = (int)strtol(num, NULL, 0);
   if (shift < 1 || shift > 26) {
     fprintf(stderr, "Shift number is out of range");
     exit(EXIT_FAILURE);
@@ -37,5 +35,5 @@ char* main() {
   }
 
   fclose(inputFile);
-  return line;
+  return 0;
 }

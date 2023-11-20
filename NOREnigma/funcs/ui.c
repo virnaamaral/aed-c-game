@@ -127,7 +127,7 @@ void menu_inicial(){
 void sobre(){
     setUtf8Encoding();
     limpa_tela();
-    printf("\tDesenvolvido em 2023, NOREnigma é um projeto para a cadeira de Algoritmos e Estrutura de Dados do terceiro período do curso de Ciência da Computação. Tínhamos a tarefa de criar um game totalmente do zero em C, tendo como enfoque alguma estrutura de dados de nossa escolha que foi abordada durante o período. Escolhemos utilizar listas duplamente encadeadas pela versatilidade e facilidade na movimentação pela lista e manipulação dos dados com ela.\n\nTime de Desenvolvimento:\nPedro Monteiro\nVirna Amaral\nEdüarda Agüiar\n");
+    printf("\tDesenvolvido em 2023, NOREnigma é um projeto para a cadeira de Algoritmos e Estrutura de Dados do terceiro período do curso de Ciência da Computação. Tínhamos a tarefa de criar um game totalmente do zero em C, tendo como enfoque alguma estrutura de dados de nossa escolha que foi abordada durante o período. Escolhemos utilizar listas duplamente encadeadas pela versatilidade e facilidade na movimentação pela lista e manipulação dos dados com ela.\n\nTime de Desenvolvimento:\nPedro Leite\nVirna Amaral\nEdüarda Agüiar\n");
 }
 
 void menu_sala(){

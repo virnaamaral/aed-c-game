@@ -12,10 +12,10 @@ Rodar sistema:
 #include <string.h>
 #include <stdbool.h>
 #include <locale.h>
-#include "ui.h"
-#include "structs.h"
-#include "sorting.h"
-#include "puzzles.h"
+#include "include/ui.h"
+#include "include/structs.h"
+#include "include/sorting.h"
+#include "include/puzzles.h"
 
 #ifdef _WIN32
     #include <windows.h>
@@ -56,7 +56,9 @@ int main(){
 
     // limpar_lista(&HeadMapaNOREnigma);
 
-    puzzle5();
+    //puzzle1();
+    puzzle3();
+    //puzzle5();
 
     return 0;
 }
