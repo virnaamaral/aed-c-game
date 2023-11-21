@@ -15,7 +15,7 @@ Rodar sistema:
 #include "include/ui.h"
 #include "include/structs.h"
 #include "include/sorting.h"
-#include "include/puzzles.h"
+#include "include/puzzle1.h"
 
 #ifdef _WIN32
     #include <windows.h>
@@ -82,6 +82,9 @@ int main(){
     printf("\n===============cursor=============\n");
 
     limpar_lista(&HeadMapaNOREnigma);
+    runp1();
+    //puzzle3();
+    //puzzle5();
 
     return 0;
 }
