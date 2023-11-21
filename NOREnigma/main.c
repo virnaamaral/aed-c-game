@@ -72,8 +72,8 @@ int main(){
                 }
             }
 
-
             historia_fim();
+
             limpar_lista(&HeadMapaNOREnigma);
         
             HeadMapaNOREnigma = NULL;
