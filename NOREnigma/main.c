@@ -16,6 +16,8 @@ Rodar sistema:
 #include "include/structs.h"
 #include "include/sorting.h"
 #include "include/puzzle1.h"
+#include "include/puzzles.h"
+
 
 #ifdef _WIN32
     #include <windows.h>
