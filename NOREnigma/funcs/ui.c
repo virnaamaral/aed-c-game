@@ -248,7 +248,7 @@ void historia(){
 void historia_fim(){
     setUtf8Encoding();
     limpa_tela();
-    imprimir_com_pausa("\n\tRapidamente, processando tudo que aconteceu, Dayane foi até o quarto do \n\tcasal e achou uma foto dos dois, partindo, com toda sua agiliidade, \n\tao velório de Clementina, que estava acontecendo na casa de Eliseu.", 35);
+    imprimir_com_pausa("\n\tRapidamente, processando tudo que aconteceu, Dayane foi até o quarto do \n\tcasal com a chave em mãos, abrindo a gaveta. Ao abrí-la, a primeira coisa que encontra é uma foto de Clementina e Reginaldo em seu dia de casamento. Com o objeto em mãos, partiu, com toda sua agilidade, \n\tao velório de Clementina, que estava acontecendo na casa de Eliseu.", 35);
     imprimir_com_pausa("\n\tChegando por lá entregou a foto para Eliseu que colocou em um lindo \n\tporta-retratos e apoiou ao lado do caixão.", 35);
     pausa();
     imprimir_com_pausa("\n\tDayane e Eliseu estavam conversando sobre o falecido casal, mostrando \n\ttodos os sentimentos envolvidos em ambos.", 35);
@@ -272,4 +272,3 @@ void historia_fim(){
     imprimir_com_pausa("\n\tAlguns minutos de conversa depois, os 3 sairam sorridentes(até de mais)\nvagando pelas ruas e observando a vida como jamais fizeram.", 35);
 
 }
-

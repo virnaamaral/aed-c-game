@@ -44,6 +44,7 @@ int main(){
             cursor_movimento = HeadMapaNOREnigma;
 
             int flag_ida_quarto = 0;
+            int flag_puzzle_1 = 0;
             
             while(1){
                 int input = 0;
@@ -53,6 +54,10 @@ int main(){
                 }else if (cursor_movimento->posicao == 2){
                     flag_ida_quarto = 1;
                     menu_quarto();
+                    if(flag_puzzle_1 == 0){
+                        puzzle1();
+                        flag_puzzle_1 = 1;
+                    }
                 }else if (cursor_movimento->posicao == 3){
                     puzzle5();
                     break;
@@ -69,6 +74,8 @@ int main(){
                     movimentacao_mapa(1, &cursor_movimento, cursor_movimento->posicao);
                 }else if(cursor_movimento->posicao == 1 && input == 3 && flag_ida_quarto == 1){
                     puzzle3();
+                    puzzle2(flag_puzzle_1);
+                    movimentacao_mapa(3, &cursor_movimento, cursor_movimento->posicao);
                 }
             }
 
@@ -85,13 +92,7 @@ int main(){
         }else if(input_menu == 3){
             break;
         }
-
     }
-
-    //puzzle1();
-    //puzzle3();
-    //puzzle5();
-
 
     return 0;
 }

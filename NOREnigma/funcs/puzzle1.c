@@ -16,18 +16,22 @@ void descriptografarCesar(int chave);
 
 int puzzle1(){
     int c=1;
-    while(1 && c != 3){
-        if(!clarificaCesar() ){
+    while(1 || c != 3){
+        if(!clarificaCesar()){
             imprimir_com_pausa("\nDayane retomou a consciência e percebeu que o tempo tinha passado apenas na mente dela, pois não fazia um minuto que estava por ali...\n", 25);
+            pausa();
             return 0;
         }else{
-            if(c == 1)
+            if(c == 1){
                 imprimir_com_pausa("\n**Um arrepio foi sentido...\nPercorreu toda sua espinha e Dayane se via paralisada.\nMas por algum motivo ela ficou estatica, travada e decidiu ver novamente as palavras estranhas que tinham aparecido para ela...\n", 35);
-            else if(c == 2)
+                pausa();
+            }else if(c == 2){
                 imprimir_com_pausa("\nDAYANE: ESTOU FICANDO MALUCA, ISSO SIM!\n NÃO TENHO IDÉIA DO QUE ESTÁ ACONTECENDO,\n QUE LUGAR MALUCO!\n", 35);
-            else
+                pausa();
+            }else{
                 imprimir_com_pausa("\nDAYANE: Não sei o que aconteceu...\n * Que dor de cabeça danada", 35);
-                return 1;
+                pausa();
+            }
             c++;
         }
     }
@@ -37,7 +41,6 @@ int puzzle1(){
 
 int clarificaCesar() {
     int chave;
-
 
     imprimir_com_pausa("\n*Algo em sua cabeça tomou o controle do seu pensamento e elaborou o seguinte questionamento...\n", 35);
     imprimir_com_pausa("\nReconheces alguma dessas palavras?.\n", 35);
@@ -49,13 +52,12 @@ int clarificaCesar() {
         printf("\n");
 
     }
-    imprimir_com_pausa("\n* Tal voz indagou novamente, VOCÊ RECONHECE ALGUMA DESSAS PALAVRAS ? QUAIS ? FALE LOGO! \nchave: ", 35);
-    printf("\0");
+    printf("\n* Tal voz indagou novamente, VOCÊ RECONHECE ALGUMA DESSAS PALAVRAS ? QUAIS ? FALE LOGO! \nchave: ", 35);
+    
     scanf("%d\n", &chave);
 
-    pausa();
 
-    if(chave == 6)
+    if(chave == 8)
         return 0;
     else
         return 1;

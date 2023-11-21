@@ -263,5 +263,5 @@ void puzzle5(){
     }
     //1
 
-    imprimir_com_pausa("\n\tApós ter respondido corretamente às perguntas feitas pelo SPRITU,\n\to livro que mantinha o fenômeno atipicamente irrealista, movido\n\tpor um SPRITU que não era do bem, entrou em combustão espontânea,\n\tainda nas mãos de Dayane.\n\tAo perceber o brilho em sua frente ela tentou jogar o livro para\n\tsua frente e se afastou dele, mas, a combustão foi instantânea,\n\to livro virou cinzas antes mesmo de tocar o chão.\n", 35);
+    imprimir_com_pausa("\n\tApós ter respondido corretamente às perguntas feitas pelo Spritu,\n\to livro que mantinha o fenômeno atipicamente irrealista, movido\n\tpor um Spritu que não era do bem, entrou em combustão espontânea,\n\tainda nas mãos de Dayane.\n\tAo perceber o brilho em sua frente ela tentou jogar o livro para\n\tsua frente e se afastou dele, mas, a combustão foi instantânea,\n\to livro virou cinzas antes mesmo de tocar o chão.\n", 35);
 }
