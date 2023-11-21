@@ -242,4 +242,29 @@ void historia(){
     pausa();
     limpa_tela();
 }
+void historia_fim(){
+    imprimir_com_pausa("\n\tRapidamente, processando tudo que aconteceu, Dayane foi até o quarto do \n\tcasal e achou uma foto dos dois, partindo, com toda sua agiliidade, \n\tao velório de Clementina, que estava acontecendo na casa de Eliseu.", 35);
+    imprimir_com_pausa("\n\tChegando por lá entregou a foto para Eliseu que colocou em um lindo \n\tporta-retratos e apoiou ao lado do caixão.", 35);
+    pausa();
+    imprimir_com_pausa("\n\tDayane e Eliseu estavam conversando sobre o falecido casal, mostrando \n\ttodos os sentimentos envolvidos em ambos.", 35);
+    imprimir_com_pausa("\n\t* Nesse momento, Eliseu, que estava bem abalado com a situação, resolveu \n\tcontar um segredo que ele guardou de todos por décadas.", 35);
+    pausa();
+    imprimir_com_pausa("\n\tELISEU: Dayane, preciso te contar uma coisa...", 35);
+    pausa();
+    imprimir_com_pausa("\n\tIsso sempre me esteve entalado, mas eu tinha minhas questões para não contar...\n"
+                       "\tTu és filha de Clementina!\n", 35);
+    pausa();
+    imprimir_com_pausa("\n\t** Clementina da um pulo do caixão, assustando à todos que estavam presentes!", 35);
+    pausa();
+    imprimir_com_pausa("\n\tTodos ficaram sem entender nada, mas começaram a agradecer ao \nDivino e foram receber a benção de Clementina.", 35);
+    imprimir_com_pausa("\n\tApós a sessão de abençoação, Clementina chamou Dayane para \nconversarem, pois Clementina não estava entendendo nada, nem como tinha parado no caixão, \nmuito menos a parte de ser mãe de Dayane.\n", 35);
+    pausa();
+    imprimir_com_pausa("\n\tAlgumas horas se passaram e as duas tinham ficado conversando e à procura de Eliseu, que, por algum motivo mistico, tinha sumido.", 35);
+    pausa();
+    imprimir_com_pausa("\n\tAté que: Em um determinado momento da conversa, Eliseu, apareceu ao \nlado delas, sem que nenhuma tivesse percebido.", 35);
+    imprimir_com_pausa("\n\tNesse momento Eliseu estava explicando tudo que tinha acontecido \nentre as duas e revelou detalhes sobre a gestação de Clementina, ", 35);
+    imprimir_com_pausa("\n\tDetalhes esses que não puderam ser ouvidos, apenas vistos pelas pessoas \nque ali estavam.", 35);
+    imprimir_com_pausa("\n\tAlguns minutos de conversa depois, os 3 sairam sorridentes(até de mais)\nvagando pelas ruas e observando a vida como jamais fizeram.", 35);
+
+}
 

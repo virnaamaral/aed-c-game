@@ -18,15 +18,15 @@ int puzzle1(){
     int c=1;
     while(1 && c != 3){
         if(!clarificaCesar() ){
-            imprimir_com_pausa("\nClementina retomou a consciência e percebeu que o tempo tinha passado apenas na mente dela, pois não fazia um minuto que estava por ali...\n", 25);
+            imprimir_com_pausa("\nDayane retomou a consciência e percebeu que o tempo tinha passado apenas na mente dela, pois não fazia um minuto que estava por ali...\n", 25);
             return 0;
         }else{
             if(c == 1)
-                imprimir_com_pausa("\n**Um arrepio foi sentido...\nPercorreu toda sua espinha e Clementina se via paralisada.\nMas por algum motivo ela ficou estatica, travada e decidiu ver novamente as palavras estranhas que tinham aparecido para ela...\n", 35);
+                imprimir_com_pausa("\n**Um arrepio foi sentido...\nPercorreu toda sua espinha e Dayane se via paralisada.\nMas por algum motivo ela ficou estatica, travada e decidiu ver novamente as palavras estranhas que tinham aparecido para ela...\n", 35);
             else if(c == 2)
-                imprimir_com_pausa("\nCLEMENTINA: ESTOU FICANDO MALUCA, ISSO SIM!\n NÃO TENHO IDÉIA DO QUE ESTÁ ACONTECENDO,\n QUE LUGAR MALUCO!\n", 35);
+                imprimir_com_pausa("\nDAYANE: ESTOU FICANDO MALUCA, ISSO SIM!\n NÃO TENHO IDÉIA DO QUE ESTÁ ACONTECENDO,\n QUE LUGAR MALUCO!\n", 35);
             else
-                imprimir_com_pausa("\nCLEMENTINA: Não sei o que aconteceu...\n * Que dor de cabeça danada", 35);
+                imprimir_com_pausa("\nDAYANE: Não sei o que aconteceu...\n * Que dor de cabeça danada", 35);
                 return 1;
             c++;
         }
