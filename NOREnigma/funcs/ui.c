@@ -135,9 +135,14 @@ void menu_sala(){
     printf("\t\tAMBIENTE: SALA/COZINHA\n\n");
     printf("[1] - Descrever Ambiente\n");
     printf("[2] - Ir para o Quarto\n");
-
 }
 
+void menu_quarto(){
+    limpa_tela();
+    printf("\t\tAMBIENTE: QUARTO\n\n");
+    printf("[1] - Descrever Ambiente\n");
+    printf("[2] - Ir para a Sala\n");
+}
 
 void historia(){
     setUtf8Encoding();
