@@ -9,34 +9,14 @@
         
         char nome[30];
         char descricao[500];
-        int itens_disponiveis;
+        int posicao;
 
     }mapa;
-
-    typedef struct item{
-        struct mapa *next;
-        struct mapa *prev;
-
-        char nome[30];
-        char descricao[500];
-
-    }item;
-
-    typedef struct puzzle{
-        struct mapa *next;
-        struct mapa *prev;
-
-        char nome[30];
-        char descricao[300];
-        char dica[350];
-        char resposta[50];
-        bool resolvido; 
-
-    }puzzle;
 
     void criar_mapa(mapa **HeadMapaNOREnigma);
     void limpar_lista(mapa **head);
     void printlist(mapa *head);
+    void movimentacao_mapa(int destino, mapa **cursor_movimento, int posicao_atual); // posical atual == cursor_movimentacao.posicao
 
 
 #endif //__STRUCTS_LIB__

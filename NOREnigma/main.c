@@ -34,7 +34,7 @@ int main(){
     //     limpa_tela();
     //     menu_inicial();
     //     scanf("%d", &input_menu);
-        
+
     //     if(input_menu == 1){
     //         historia();
     //         puzzle3();
