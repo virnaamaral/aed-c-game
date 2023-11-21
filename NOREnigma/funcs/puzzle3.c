@@ -40,9 +40,9 @@ void puzzle3(){
         
         printf("\nInsira a resposta para o circuito acima: ");
 
-        //TODO temos que tratar a entrada das respostas
+        //TODO temos que tratar a entrada das respostas, ele só aceita a resposta se tiver com as entradas separadas.
         scanf("%d %d %d %d", &A, &B, &C, &D);
-        
+
         if(A == 1 && B == 0 && C == 0 && D == 1){
             flag_circuito_1 = 1;
         }else{
@@ -103,7 +103,7 @@ void puzzle3(){
 
         printf("\nInsira a resposta para o circuito acima: ");
         scanf("%d %d %d %d", &A, &B, &C, &D);
-    
+
         if((A == 1 && B == 1 && C == 1 && D == 0) && flag_circuito_1 == 1 && flag_circuito_2 == 1){
             flag_circuito_3 = 1;
         }else{

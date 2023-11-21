@@ -7,17 +7,18 @@
 #include <stdlib.h>
 #include "ctype.h"
 #include "../include/ui.h"
-#include "../include/puzzle1.h"
 
 
 // Função para descriptografar a mensagem em cifra de César
+int clarificaCesar();
+void descriptografarCesar(int chave);
 
 
-int runp1(){
-    int c=0;
+int puzzle1(){
+    int c=1;
     while(1 && c != 3){
         if(!clarificaCesar() ){
-            imprimir_com_pausa("\nClementina retomou a consciencia e percebeu que o tempo tinha passado apenas na mente dela, pois não fazia um minuto que entrara no recinto...\n", 25);
+            imprimir_com_pausa("\nClementina retomou a consciência e percebeu que o tempo tinha passado apenas na mente dela, pois não fazia um minuto que estava por ali...\n", 25);
             return 0;
         }else{
             if(c == 1)
@@ -26,6 +27,7 @@ int runp1(){
                 imprimir_com_pausa("\nCLEMENTINA: ESTOU FICANDO MALUCA, ISSO SIM!\n NÃO TENHO IDÉIA DO QUE ESTÁ ACONTECENDO,\n QUE LUGAR MALUCO!\n", 35);
             else
                 imprimir_com_pausa("\nCLEMENTINA: Não sei o que aconteceu...\n * Que dor de cabeça danada", 35);
+                return 1;
             c++;
         }
     }
@@ -48,7 +50,7 @@ int clarificaCesar() {
 
     }
     imprimir_com_pausa("\n* Tal voz indagou novamente, VOCÊ RECONHECE ALGUMA DESSAS PALAVRAS ? QUAIS ? FALE LOGO! \nchave: ", 35);
-
+    printf("\0");
     scanf("%d\n", &chave);
 
     pausa();

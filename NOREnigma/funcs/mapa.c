@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "structs.h"
+#include "../include/structs.h"
 
 void criar_mapa(mapa **HeadMapaNOREnigma){
     mapa *comodo1 = (mapa *)malloc(sizeof(mapa));

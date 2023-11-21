@@ -15,7 +15,8 @@ Rodar sistema:
 #include "include/ui.h"
 #include "include/structs.h"
 #include "include/sorting.h"
-#include "include/puzzle1.h"
+//#include "include/puzzle1.h"
+#include "include/puzzles.h"
 
 #ifdef _WIN32
     #include <windows.h>
@@ -56,7 +57,7 @@ int main(){
 
     // limpar_lista(&HeadMapaNOREnigma);
 
-    runp1();
+    //puzzle1();
     //puzzle3();
     //puzzle5();
 

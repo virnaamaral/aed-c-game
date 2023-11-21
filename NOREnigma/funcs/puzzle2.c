@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sorting.h"
-#include "structs.h"
-#include "ui.h"
+#include "../include/sorting.h"
+#include "../include/structs.h"
+#include "../include/ui.h"
 
 
 void puzzle2(){
