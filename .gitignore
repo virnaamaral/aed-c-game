@@ -56,3 +56,5 @@ dkms.conf
 *.exe
 *saida.exe
 .idea
+*.main
+*.cifra

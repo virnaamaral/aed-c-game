@@ -26,9 +26,10 @@ Rodar sistema:
 
 int main(){
 
-    int input_menu;
-    setUtf8Encoding();
-    limpa_tela();
+    // int input_menu;
+    // setUtf8Encoding();
+    // limpa_tela();
+    
     // while(1){
     //     limpa_tela();
     //     menu_inicial();
@@ -37,6 +38,7 @@ int main(){
     //     if(input_menu == 1){
     //         historia();
     //         puzzle3();
+    //         puzzle5();
     //     }else if(input_menu == 2){
     //         sobre();
     //         pausa();
@@ -46,19 +48,40 @@ int main(){
 
     // }
 
-    // mapa *HeadMapaNOREnigma = NULL;
-    // criar_mapa(&HeadMapaNOREnigma);
+    mapa *HeadMapaNOREnigma = NULL, *cursor_movimento = NULL;
+    criar_mapa(&HeadMapaNOREnigma);
+    cursor_movimento = HeadMapaNOREnigma;
 
-    // printlist(HeadMapaNOREnigma);
+    printf("\n===============cursor=============\n");
+    printf("\ncomodo cursor: %s\n", cursor_movimento->nome);
 
-    // printf("%s\n", HeadMapaNOREnigma->nome);
-    // printf("%d\n", HeadMapaNOREnigma->prev);
+    printf("\n===============cursor=============\n");
 
-    // limpar_lista(&HeadMapaNOREnigma);
+    printf("\n****mapa****\n");
 
-    //puzzle1();
-    puzzle3();
-    //puzzle5();
+    printlist(HeadMapaNOREnigma);
+
+    printf("\n****mapa****\n");
+
+
+    printf("\n===============cursor=============\n");
+
+    movimentacao_mapa(2, &cursor_movimento, cursor_movimento->posicao);
+
+    movimentacao_mapa(1, &cursor_movimento, cursor_movimento->posicao);
+
+    movimentacao_mapa(3, &cursor_movimento, cursor_movimento->posicao);
+
+
+    printf("\ncomodo cursor: %s\n", cursor_movimento->nome);
+
+    // movimentacao_mapa(3, &cursor_movimento, cursor_movimento->posicao);
+
+    // printf("\ncomodo cursor: %s\n", cursor_movimento->nome);
+
+    printf("\n===============cursor=============\n");
+
+    limpar_lista(&HeadMapaNOREnigma);
 
     return 0;
 }
