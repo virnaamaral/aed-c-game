@@ -8,7 +8,7 @@
         struct mapa *prev;
         
         char nome[30];
-        char descricao[500];
+        char descricao[1000];
         int posicao;
 
     }mapa;

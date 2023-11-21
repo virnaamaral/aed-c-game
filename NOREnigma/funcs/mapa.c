@@ -18,27 +18,25 @@ void criar_mapa(mapa **HeadMapaNOREnigma){
 
     (*HeadMapaNOREnigma) = comodo1;
 
-    //O cômodo é consideravelmente grande. À sua direita, você vê um sofá pequeno, uma poltrona vermelha e uma televisão de tubo posicionada em cima de uma estante simples e pequena de madeira.\n\nÀ sua esquerda, você vê uma pequena mesa redonda de madeira com duas cadeiras e, em cima dela, um pequeno jarro de vidro transparente e com algumas flores. Mais a frente da mesa, você também observa uma pia e um balcão grande, um fogão e geladeiras de aparência antiga, mas parecem funcionar.\nEntretanto, você vê algo que lhe chama a atenção.\n\nÀ esquerda do balcão, você vê uma grande porta de madeira com 3 lâmpadas apagadas e um conjunto de fios que parecem estar conectados a um faqueiro em cima do balcão. Diferente do habitual, as facas não estão encaixadas, mas sim, no balcão.
-
-    char descricao_sala[] = "\n\tdesc sala1\n";
-    char descricao_quarto[] = "\n\tdesc quar2\n";
-    char descricao_sotao[] = "\n\tdesc sotao3\n";
+    char descricao_sala[] = "\n\tO cômodo é consideravelmente grande. À sua direita, você vê um sofá pequeno, uma poltrona vermelha e uma televisão de tubo posicionada em cima de uma estante simples e pequena de madeira. À sua esquerda, você vê uma pequena mesa redonda de madeira com duas cadeiras e, em cima dela, um pequeno jarro de vidro transparente e com algumas flores. Mais a frente da mesa, você também observa uma pia e um balcão grande, um fogão e geladeiras de aparência antiga, mas parecem funcionar. Entretanto, você vê algo que lhe chama a atenção. À esquerda do balcão, você vê uma grande porta de madeira com 3 lâmpadas apagadas e um conjunto de fios que parecem estar conectados a um faqueiro em cima do balcão. Diferente do habitual, as facas não estão encaixadas, mas sim, no balcão.\n";
+    char descricao_quarto[] = "\n\tO quarto é simples, mas nem por isso perde sua beleza. Você vê uma cama de casal grande, com uma cabeceira bem detalhada, a madeira parece ser de qualidade. Mais em frente, está um guarda roupa consideravelmente grande e, perto dele, pode-se ver uma penteadeira com alguns perfumes, maquiagens e uma caixa de remédios. Porém, ao lado da cama, existe um criado mudo com uma gaveta que possui buraco para chave.\n";
+    char descricao_sotao[] = "\n\tO sótão é escuro e empoeirado, cheio de caixas e itens não utilizados na casa. O disjuntor pode ser visto do outro lado do cômodo. Você também vê uma janela e o vidro dela está tão sujo que não dá pra enxergar do lado de fora.\n";
 
     comodo1->prev = NULL;
     comodo1->next = comodo2;
-    strcpy(comodo1->nome, "sala");
+    strcpy(comodo1->nome, "Sala");
     strcpy(comodo1->descricao, descricao_sala);
     comodo1->posicao = 1;
 
     comodo2->prev = comodo1;
     comodo2->next = comodo3;
-    strcpy(comodo2->nome, "quarto");
+    strcpy(comodo2->nome, "Quarto");
     strcpy(comodo2->descricao, descricao_quarto);
     comodo2->posicao = 2;
     
     comodo3->prev = comodo2;
     comodo3->next = NULL;
-    strcpy(comodo3->nome, "sotao");
+    strcpy(comodo3->nome, "Sótão");
     strcpy(comodo3->descricao, descricao_sotao);
     comodo3->posicao = 3;
 

@@ -9,5 +9,7 @@
     void historia();
     void setUtf8Encoding();
     void limpar_buffer_entrada();
+    void menu_sala();
+    void menu_quarto();
 
 #endif //__UI_LIB__

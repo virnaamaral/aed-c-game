@@ -134,14 +134,14 @@ void menu_sala(){
     limpa_tela();
     printf("\t\tAMBIENTE: SALA/COZINHA\n\n");
     printf("[1] - Descrever Ambiente\n");
-    printf("[2] - Ir para o Quarto\n");
+    printf("[2] - Ir para o Quarto\n\n");
 }
 
 void menu_quarto(){
     limpa_tela();
     printf("\t\tAMBIENTE: QUARTO\n\n");
     printf("[1] - Descrever Ambiente\n");
-    printf("[2] - Ir para a Sala\n");
+    printf("[2] - Ir para a Sala\n\n");
 }
 
 void historia(){

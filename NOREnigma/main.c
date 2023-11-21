@@ -30,32 +30,57 @@ int main(){
     int input_menu;
     setUtf8Encoding();
     limpa_tela();
-    // while(1){
-    //     limpa_tela();
-    //     menu_inicial();
-    //     scanf("%d", &input_menu);
+    while(1){
+        limpa_tela();
+        menu_inicial();
+        scanf("%d", &input_menu);
 
-    //     if(input_menu == 1){
-    //         historia();
-    //         puzzle3();
-    //     }else if(input_menu == 2){
-    //         sobre();
-    //         pausa();
-    //     }else if(input_menu == 3){
-    //         break;
-    //     }
+        if(input_menu == 1){
+            historia();
+            
+            mapa *HeadMapaNOREnigma = NULL, *cursor_movimento = NULL;
+            criar_mapa(&HeadMapaNOREnigma);
+            cursor_movimento = HeadMapaNOREnigma;
 
-    // }
+            while(1){
+                int input = 0;
 
-    // mapa *HeadMapaNOREnigma = NULL;
-    // criar_mapa(&HeadMapaNOREnigma);
+                if(cursor_movimento->posicao == 1){
+                    menu_sala();
+                }else if (cursor_movimento->posicao == 2){
+                    menu_quarto();
+                }else if (cursor_movimento->posicao == 3){
+                    puzzle5();
+                }
 
-    // printlist(HeadMapaNOREnigma);
+                scanf("%d", &input);
 
-    // printf("%s\n", HeadMapaNOREnigma->nome);
-    // printf("%d\n", HeadMapaNOREnigma->prev);
+                if(input == 1){
+                    printf("%s", cursor_movimento->descricao);
+                    pausa();
+                }else if(input == 2 && cursor_movimento->posicao == 1){
+                    movimentacao_mapa(2, &cursor_movimento, cursor_movimento->posicao);
+                }else if(input == 2 && cursor_movimento->posicao == 2){
+                    movimentacao_mapa(1, &cursor_movimento, cursor_movimento->posicao);
+                }
 
-    // limpar_lista(&HeadMapaNOREnigma);
+            }
+
+            // puzzle3();
+        
+            limpar_lista(&HeadMapaNOREnigma);
+        
+            HeadMapaNOREnigma = NULL;
+            cursor_movimento = NULL;
+        
+        }else if(input_menu == 2){
+            sobre();
+            pausa();
+        }else if(input_menu == 3){
+            break;
+        }
+
+    }
 
     //puzzle1();
     //puzzle3();
