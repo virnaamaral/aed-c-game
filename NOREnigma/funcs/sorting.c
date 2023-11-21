@@ -6,7 +6,7 @@
 
 int bubblesort() {
 
-    int array[5] = {5, 3, 7, 9, 1}, aux, resposta_bubblesort;
+    int array[5] = {7, 5, 9, 3, 1}, aux, resposta_bubblesort;
 
     for (int i = 1; i < 5; i++) {
         for (int j = 0; j < 5 - 1; j++) {
@@ -18,15 +18,8 @@ int bubblesort() {
                 array[j + 1] = array[j];
                 array[j] = aux;
 
-                for (int k = 0; k < 5; k++) {
-                    printf("%d ", array[k]);
-                }
             }
         }
-    }
-
-    for (int i = 0; i < 5; i++) {
-        printf("%d ", array[i]);
     }
 
     return resposta_bubblesort;

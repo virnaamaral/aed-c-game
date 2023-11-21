@@ -117,5 +117,4 @@ void puzzle3(){
     printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
     pausa();
     limpa_tela();
-    //TODO terminar isso aqui, mas a versão ta feita, falta inserir parte da historia
 }

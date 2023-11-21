@@ -16,11 +16,14 @@ void puzzle2(int flag_puzzle_1){ // puzzle abrir sotao
         // limpa_tela();
         printf("\nInsira a chave: ");
         scanf("%d", &chave);
-
-        int resposta_bubblesort = 0, resposta_selectionsort = 0, resposta_insertionsort = 0;
         
+        int resposta_bubblesort = 0, resposta_selectionsort = 0, resposta_insertionsort = 0;
+        int resposta_certa_bubblesort = bubblesort();
+        int resposta_certa_selectionsort = selectionsort();
+        int resposta_certa_insertionsort = insertionsort();
+
         if(chave == 8){
-            imprimir_com_pausa("\033[3m\"OITO!!... Que estranho, era como se algo dentro de mim soubesse que eu precisasse dizer esse número...\"\033[0m\n", 35);
+            imprimir_com_pausa("\n\033[3m\"OITO!!... Que estranho, era como se algo dentro de mim soubesse que eu precisasse dizer esse número...\"\033[0m\n", 35);
             pausa();
             limpa_tela();
             imprimir_com_pausa("\tAs palavras magicamente começam a desembaralhar-se na folha. Quando você percebe, toma um susto. Pouco a pouco, você vê se formando um texto.\n", 35);
@@ -33,18 +36,20 @@ void puzzle2(int flag_puzzle_1){ // puzzle abrir sotao
                 printf("\n\t\033[3mNa dança das bolhas, observe com atenção,\n\tNa segunda passada, o segundo é a solução.\n\tNa escolha seleta, a quarta rotação,\n\tRevela o quarto, com clara precisão\033[0m\n");
                 printf("\n\t\033[3mNum sótão fechado, um mistério a desvendar,\n\tCom danças de números, um código a formar.\n\tBolhas que sobem, seleções que brilham ao luar,\n\tInserções precisas, um segredo a revelar.\033[0m\n");
                 printf("\n\t\033[3mE na inserção final, sem mais demora,\n\tO quinto na primeira, chega sua hora.\n\tJunte os números, a chave agora,\n\tE o cadeado abre, sem mais demora.\033[0m\n\n");
-
-                printf("\nInsira a resposta para a pergunta: ");
+                printf("\nUtilizando Bubblesort, Selectionsort e Insertionsort, ordene o array abaixo, obtendo a resposta descrita no poema acima: \n");
+                
+                printf("\nArray = [7, 5, 9, 3, 1]");
                 printf("\nFormato de resposta: bubblesort selectionsort insertionsort\n");
+                printf("\nInsira a resposta para a pergunta: ");
 
                 scanf("%d %d %d", &resposta_bubblesort, &resposta_selectionsort, &resposta_insertionsort);
-                if(resposta_bubblesort == 3 && resposta_selectionsort == 7 && resposta_insertionsort == 1){
-                    imprimir_com_pausa("\tDepois de escrever os números no papel, você ouve o cadeado que existia no alçapão do sótão cair no chão. Você decide subir as escadas e, ao final, a energia falta. Você lembra que o disjuntor fica justamente no sótão. Você abre o alçapão e entra.\n", 35);
+                if(resposta_bubblesort == resposta_certa_bubblesort && resposta_selectionsort == resposta_certa_selectionsort && resposta_insertionsort == resposta_certa_insertionsort){
+                    imprimir_com_pausa("\n\tDepois de escrever os números no papel, você ouve o cadeado que existia no alçapão do sótão cair no chão. Você decide subir as escadas e, ao final, a energia falta. Você lembra que o disjuntor fica justamente no sótão. Você abre o alçapão e entra.\n", 35);
                     pausa();
                     limpa_tela();
                     break;
                 }else{
-                    imprimir_com_pausa("\tVocê escreve os números no papel e nada muda. Eles brilham em vermelho e somem. Provavelmente algo está errado.\n", 35);
+                    imprimir_com_pausa("\n\tVocê escreve os números no papel e nada muda. Eles brilham em vermelho e somem. Provavelmente algo está errado.\n", 35);
                     pausa();
                     limpa_tela();
                 }
