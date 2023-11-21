@@ -42,12 +42,15 @@ int main(){
             criar_mapa(&HeadMapaNOREnigma);
             cursor_movimento = HeadMapaNOREnigma;
 
+            int flag_ida_quarto = 0;
+            
             while(1){
                 int input = 0;
 
                 if(cursor_movimento->posicao == 1){
-                    menu_sala();
+                    menu_sala(flag_ida_quarto);
                 }else if (cursor_movimento->posicao == 2){
+                    flag_ida_quarto = 1;
                     menu_quarto();
                 }else if (cursor_movimento->posicao == 3){
                     puzzle5();
@@ -62,6 +65,8 @@ int main(){
                     movimentacao_mapa(2, &cursor_movimento, cursor_movimento->posicao);
                 }else if(input == 2 && cursor_movimento->posicao == 2){
                     movimentacao_mapa(1, &cursor_movimento, cursor_movimento->posicao);
+                }else if(cursor_movimento->posicao == 1 && input == 3 && flag_ida_quarto == 1){
+                    puzzle3();
                 }
 
             }
