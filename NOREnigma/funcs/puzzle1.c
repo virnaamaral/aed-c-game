@@ -2,24 +2,93 @@
 // Created by pdrvsk on 11/19/23.
 //
 
-/*
-
-PUZZLE 1 - CIFRA DE CESAR
-
-Folha arrancada do diario do casal com um pouco da história. Ela ta criptografada em cifra de cesar,
-ai atrás da folha tem um pedaço do algoritmo e o player vai ter que completar, pra poder descriptografar a folha
-### Vai ser basicamente um print de uma função com algumas partes vazias, para marcar a alternativa certa.
-O retorno desse quiz vai ser a key que vai ser usada para desbloquear o #PUZZLE5
-
- Ela tem 3 chances de marcar a resposta correta, não conseguindo marcar a certa ela não vai ter a chave que libera o #PUZZLE5 e no #PUZZLE5 ela teria que dizer qual a chave certa, se ela não tiver recebido a chave ela vai ter que chutar qual a chave, até acertar.
-
-*/
-
-
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include "sorting.h"
-#include "structs.h"
-#include "ui.h"
+#include <stdlib.h>
+#include "ctype.h"
+#include "../include/ui.h"
+#include "../include/puzzle1.h"
+
+
+// Função para descriptografar a mensagem em cifra de César
+
+
+int runp1(){
+    int c=0;
+    while(1 && c != 3){
+        if(!clarificaCesar() ){
+            imprimir_com_pausa("\nClementina retomou a consciencia e percebeu que o tempo tinha passado apenas na mente dela, pois não fazia um minuto que entrara no recinto...\n", 25);
+            return 0;
+        }else{
+            if(c == 1)
+                imprimir_com_pausa("\n**Um arrepio foi sentido...\nPercorreu toda sua espinha e Clementina se via paralisada.\nMas por algum motivo ela ficou estatica, travada e decidiu ver novamente as palavras estranhas que tinham aparecido para ela...\n", 35);
+            else if(c == 2)
+                imprimir_com_pausa("\nCLEMENTINA: ESTOU FICANDO MALUCA, ISSO SIM!\n NÃO TENHO IDÉIA DO QUE ESTÁ ACONTECENDO,\n QUE LUGAR MALUCO!\n", 35);
+            else
+                imprimir_com_pausa("\nCLEMENTINA: Não sei o que aconteceu...\n * Que dor de cabeça danada", 35);
+            c++;
+        }
+    }
+    return 0;
+}
+
+
+int clarificaCesar() {
+    int chave;
+
+
+    imprimir_com_pausa("\n*Algo em sua cabeça tomou o controle do seu pensamento e elaborou o seguinte questionamento...\n", 35);
+    imprimir_com_pausa("\nReconheces alguma dessas palavras?.\n", 35);
+    imprimir_com_pausa("\n*Tal sansação estranha veio e consumiu o seu corpo, como um \033[3mDéjà vu\033[0m.\n", 35);
+    pausa();
+    for(int i = 1; i <= 26; i++){
+        printf("%d - ", i);
+        descriptografarCesar(i);
+        printf("\n");
+
+    }
+    imprimir_com_pausa("\n* Tal voz indagou novamente, VOCÊ RECONHECE ALGUMA DESSAS PALAVRAS ? QUAIS ? FALE LOGO! \nchave: ", 35);
+
+    scanf("%d\n", &chave);
+
+    pausa();
+
+    if(chave == 6)
+        return 0;
+    else
+        return 1;
+}
+
+void descriptografarCesar(int chave) {
+
+//TODO create a function to, basically, bruteforce all possibilities
+
+/*    if (chave < 1 || chave > 26) {
+        fprintf(stderr, "chave number is out of range");
+        exit(EXIT_FAILURE);
+    }*/
+
+    char *inputFileName="folha_cifrada.txt";
+
+
+    FILE *inputFile = fopen(inputFileName, "r");
+    if (inputFile == NULL) {
+        fprintf(stderr, "Failed to open input file\n");
+        exit(EXIT_FAILURE);
+    }
+
+
+
+    char line[256];
+    while (fgets(line, sizeof(line), inputFile)) {
+        for (int i = 0; line[i] != '\0'; i++) {
+            if (!isspace(line[i]) && !isblank(line[i]) && (line[i] != ',') != 0)
+                printf("%c", (((line[i] - 97) + chave) % 26) + 97);
+            else
+                printf("%c", line[i]);
+        }
+    }
+
+    fclose(inputFile);
+}
 

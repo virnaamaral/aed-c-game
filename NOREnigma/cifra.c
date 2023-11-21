@@ -13,34 +13,42 @@
 void descriptografarCesar(int chave);
 int clarificaCesar();
 
+/*
 int main(){
     int c=0;
     while(1){
-        if(clarificaCesar() == 1){
-            c++;
+        if(!clarificaCesar() ){
+            printf("Passou");
+            break;
         }else{
-
+            c++;
         }
     }
     return 0;
 }
+*/
 
 int clarificaCesar() {
     int chave;
 
 
-    imprimir_com_pausa("\n\tReconheces alguma dessas palavras?.\n", 35);
-    imprimir_com_pausa("\n\tTal sansação estranha veio e consumiu o seu corpo, como um \033[3mDéjà vu\033[0m.\n", 35);
+    imprimir_com_pausa("\n*Algo em sua cabeça tomou o controle do seu pensamento e elaborou o seguinte questionamento...\n", 35);
+    imprimir_com_pausa("\nReconheces alguma dessas palavras?.\n", 35);
+    imprimir_com_pausa("\n*Tal sansação estranha veio e consumiu o seu corpo, como um \033[3mDéjà vu\033[0m.\n", 35);
+    pausa();
     for(int i = 1; i <= 26; i++){
         printf("%d - ", i);
         descriptografarCesar(i);
         printf("\n");
 
     }
-    pausa();
+    imprimir_com_pausa("\n* Tal voz indagou novamente, VOCÊ RECONHECE ALGUMA DESSAS PALAVRAS ? QUAIS ? FALE LOGO! \nchave: ", 35);
+    scanf("%d\n", &chave);
 
-    //scanf("%d");
-    return 0;
+    if(chave == 6)
+        return 0;
+    else
+        return 1;
 }
 
 void descriptografarCesar(int chave) {
