@@ -246,6 +246,8 @@ void historia(){
     limpa_tela();
 }
 void historia_fim(){
+    setUtf8Encoding();
+    limpa_tela();
     imprimir_com_pausa("\n\tRapidamente, processando tudo que aconteceu, Dayane foi até o quarto do \n\tcasal e achou uma foto dos dois, partindo, com toda sua agiliidade, \n\tao velório de Clementina, que estava acontecendo na casa de Eliseu.", 35);
     imprimir_com_pausa("\n\tChegando por lá entregou a foto para Eliseu que colocou em um lindo \n\tporta-retratos e apoiou ao lado do caixão.", 35);
     pausa();

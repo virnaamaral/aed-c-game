@@ -7,6 +7,7 @@
     void menu_inicial();
     void sobre();
     void historia();
+    void historia_fim();
     void setUtf8Encoding();
     void limpar_buffer_entrada();
     void menu_sala(int flag_ida_quarto);

@@ -30,6 +30,7 @@ int main(){
     int input_menu;
     setUtf8Encoding();
     limpa_tela();
+
     while(1){
         limpa_tela();
         menu_inicial();
@@ -54,6 +55,7 @@ int main(){
                     menu_quarto();
                 }else if (cursor_movimento->posicao == 3){
                     puzzle5();
+                    break;
                 }
 
                 scanf("%d", &input);
@@ -68,11 +70,10 @@ int main(){
                 }else if(cursor_movimento->posicao == 1 && input == 3 && flag_ida_quarto == 1){
                     puzzle3();
                 }
-
             }
 
-            // puzzle3();
-        
+
+            historia_fim();
             limpar_lista(&HeadMapaNOREnigma);
         
             HeadMapaNOREnigma = NULL;
