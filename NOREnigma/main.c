@@ -15,7 +15,6 @@ Rodar sistema:
 #include "include/ui.h"
 #include "include/structs.h"
 #include "include/sorting.h"
-//#include "include/puzzle1.h"
 #include "include/puzzles.h"
 
 #ifdef _WIN32
@@ -23,7 +22,6 @@ Rodar sistema:
 #else
     #include <unistd.h>
 #endif
-
 
 int main(){
 
@@ -74,6 +72,7 @@ int main(){
                     movimentacao_mapa(1, &cursor_movimento, cursor_movimento->posicao);
                 }else if(cursor_movimento->posicao == 1 && input == 3 && flag_ida_quarto == 1){
                     puzzle3();
+                    pos_puzzle3();
                     puzzle2(flag_puzzle_1);
                     movimentacao_mapa(3, &cursor_movimento, cursor_movimento->posicao);
                 }

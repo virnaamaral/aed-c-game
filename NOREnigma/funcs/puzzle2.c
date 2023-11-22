@@ -11,7 +11,7 @@ void puzzle2(int flag_puzzle_1){ // puzzle abrir sotao
 
     int chave;
     if(flag_puzzle_1 == 1){
-        imprimir_com_pausa("\tVocê pega o papel que encontrou na caixa nas mãos. As palavras estão embaralhadas. Você se lembra do evento estranho que aconteceu no quarto. \033[3m\"Será se tem algo haver com aquela tal de chave?\"\033[0m\n", 35);
+        imprimir_com_pausa("\tVocê pega o papel e a caneta que encontrou na caixa. As palavras estão embaralhadas. Você se lembra do evento estranho que aconteceu no quarto. \033[3m\"Será se tem algo haver com aquela tal de chave?\"\033[0m\n", 35);
         // pausa();
         // limpa_tela();
         printf("\nInsira a chave: ");
@@ -56,7 +56,7 @@ void puzzle2(int flag_puzzle_1){ // puzzle abrir sotao
             }
         }
     }else{
-        imprimir_com_pausa("\tVocê pega o papel que encontrou na caixa nas mãos. As palavras estão embaralhadas. Talvez você tenha que fazer uma visita ao quarto de Clementina...\n", 35);
+        imprimir_com_pausa("\n\tVocê pega o papel que encontrou na caixa nas mãos. As palavras estão embaralhadas. Talvez você tenha que fazer uma visita ao quarto de Clementina...\n", 35);
         pausa();
         limpa_tela();
         return;

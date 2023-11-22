@@ -106,6 +106,9 @@ void puzzle3(){
 
         if((A == 1 && B == 1 && C == 1 && D == 0) && flag_circuito_1 == 1 && flag_circuito_2 == 1){
             flag_circuito_3 = 1;
+            printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
+            pausa();
+            limpa_tela();
         }else{
             limpa_tela();
             printf("\n\nApós inserir as facas, você espera que uma lâmpada se acenda, mas a porta permanece inalterada.\n\"A sequência não está correta\", você conclui, retirando as facas para tentar outra combinação. A resposta certa ainda está à sua espera.");
@@ -114,7 +117,4 @@ void puzzle3(){
         }
     }
 
-    printf("\n\nAo posicionar a última faca, você vê a última lâmpada se acender e, junto disso, você ouve um clique. Você decide girar a maçaneta e é surpreendida. Isso porque a porta que acabou de ser aberta é de um armário de ferramentas.\n");
-    pausa();
-    limpa_tela();
 }

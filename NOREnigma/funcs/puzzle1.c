@@ -32,10 +32,9 @@ int puzzle1() {
 int clarificaCesar() {
     int chave;
 
-    imprimir_com_pausa("\n*Algo em sua cabeça tomou o controle do seu pensamento...\n", 35);
-    imprimir_com_pausa("\nReconheces alguma dessas palavras?.\n", 35);
-    imprimir_com_pausa("\n*Tal sensação estranha veio e consumiu o seu corpo...\n", 35);
+    imprimir_com_pausa("\n*Algo em sua cabeça tomou o controle do seu pensamento...\nReconheces alguma dessas palavras?\n*Tal sensação estranha veio e consumiu o seu corpo...\n", 35);
     
+
     for(int i = 1; i <= 26; i++){
         printf("%d - ", i);
         descriptografarCesar(i);

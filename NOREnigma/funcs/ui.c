@@ -245,6 +245,54 @@ void historia(){
     pausa();
     limpa_tela();
 }
+
+void pos_puzzle3(){
+    setUtf8Encoding();
+    limpa_tela();
+
+    imprimir_com_pausa("\tPorém, você observa em meio as ferramentas uma caixa coberta de poeira. Você pega a caixa e decide abrí-la. Dentro dela, o primeiro objeto observado é uma fotografia de um casamento, um jovem rapaz e uma bela moça. No verso, está escrito \"\033[3mJoana & Jorge - 21/11/1943\"\033[3m.\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\033[3m\"Quem são essas pessoas?... AH! Se não me engano, são os pais de Reginaldo! Que fofos! Lembro de Clementina mencionar algumas vezes sobre seus sogros, me dizia que Jorge era uma figura e tanto...\"\033[0m\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tAo passo que você se lembra das conversas com Clementina, lembra do ultraje ocorrido esta tarde. Turbilhões de emoções inundam seu coração, mas logo você se lembra do seu objetivo e retoma o foco.\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tObservando mais, você também encontra na caixa o que se parece um diário. Ao abrir, você vê diversos relatos que parecem ser de Reginaldo e Clementina, alguns falando sobre coisas cotidianas: a colheita de frutos do casal que acontecia diariamente, o passo a passo do enxerto de flores, números de telefone, até que você chega a uma página um pouco mais preenchida que as outras.\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\033[3m\t\tReginaldo, 10 de junho de 2018\n\tHoje tentamos executar o código descrito naquele grande livro estranho, e... nada aconteceu, aparentemente não funcionou. Gostaria muito de ter tido filhos, mas Clementina nunca gostou da ideia, sempre dizia que era perda de tempo. Agora nós dois estamos velhos e sozinhos, mal recebemos visitas de nossa família ou de pessoas da vila. É muito solitário aqui. Espero que Clementina concorde em ir comigo no orfanato Brilho do Sol próxima semana, ainda acho que podemos cuidar de um adolescente por tempo suficiente.\n\033[0m", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tVocê folheia brevemente o diário e observa que ele está muito preenchido. Com o passar dos dias, a escrita de Reginaldo começava a se tornar estranha e desconexa. Com frequência, mencionando um tal de \"Malévolo\", sempre dizendo que iria fazê-lo \"pagar pelo o que fez.\"\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tA medida que você lê, vê que Reginaldo começara a escrever coisas completamente sem sentido, pareciam até estar em outra língua. Até que você vê a seguinte página e começa a sentir o coração palpitar mais forte.\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\033[3m\n\t\"FAZ UM MÊS, UM MÊS QUE ELE ME PROMETEU! COMO ELE PÔDE FAZER ISSO COMIGO?! E TUDO ISSO POR DESLEIXO! POBRE CLEMENTINA, MEU AMOR, PERDOE-ME!\"\n\033[0m", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tApós esta escrita, o diário possui folhas rasgadas, algumas ainda parecem ter tinta. A capa interna está repleta de espirais em tinta preta.\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\033[3m\"O que será que Reginaldo fez?... Por que ele estava escrevendo dessa maneira estranha?...\"\n\033[0m", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tNa caixa, agora é possível ver mais algumas coisas: uma grande peça de eletrônico, mais se parece um disco rígido, uma caneta e uma folha que, quando você a toca, símbolos começam a surgir. Assustada, você a solta na caixa novamente.\n", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\033[3m\"Mas que danado é isso?! Só posso estar vendo coisa! Essa casa e as coisas dentro dela são muito estranhas...\"\n\033[0m", 25);
+    pausa();
+    limpa_tela();
+    imprimir_com_pausa("\tFinalmente, após breves suspiros, você pega a página e a caneta, já sabendo o que provavelmente vem por aí.\n", 25);
+    pausa();
+    limpa_tela();
+}
+
+
+
 void historia_fim(){
     setUtf8Encoding();
     limpa_tela();

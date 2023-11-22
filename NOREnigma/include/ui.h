@@ -7,6 +7,7 @@
     void menu_inicial();
     void sobre();
     void historia();
+    void pos_puzzle3();
     void historia_fim();
     void setUtf8Encoding();
     void limpar_buffer_entrada();
